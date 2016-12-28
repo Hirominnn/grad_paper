@@ -1,0 +1,42 @@
+\BOOKMARK [0][-]{chapter.1}{序論}{}% 1
+\BOOKMARK [1][-]{section.1.1}{背景}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{研究目的}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{本論文の構成}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{先行研究}{}% 5
+\BOOKMARK [1][-]{section.2.1}{心理学における知識}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{知識の属性や性質}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{知識の獲得や活用}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Massive Open Online Courses}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{深層学習}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{知識獲得の予測}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{Knowledge Tracingの定式化}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.2}{Bayesian Knowledge Tracing}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.3}{Performance Factor Analysis}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.4}{Deep Knowledge Tracing}{section.2.4}% 15
+\BOOKMARK [1][-]{section.2.5}{ネットワーク分析}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{分析手法}{}% 17
+\BOOKMARK [1][-]{section.3.1}{知識獲得における知識間関係の抽出}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{データの要件}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{知識間関係ネットワークの構造評価}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{データセット}{}% 21
+\BOOKMARK [1][-]{section.4.1}{勉強サプリ}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{データセットの作成}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{データセットの概観}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{個々のデータセットの具体的説明}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{実験}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Deep Knowledge Tracingの拡張および最適化}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{設定}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{結果}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.3.1}{各データセットにおける予測性能}{section.5.3}% 30
+\BOOKMARK [2][-]{subsection.5.3.2}{抽出した知識間関係ネットワークの可視化}{section.5.3}% 31
+\BOOKMARK [2][-]{subsection.5.3.3}{ネットワーク構造の分析}{section.5.3}% 32
+\BOOKMARK [0][-]{chapter.6}{考察}{}% 33
+\BOOKMARK [1][-]{section.6.1}{データセットと知識構造}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{知識構造分析手法の他MOOCsへの適用可能性}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{今後の展望}{chapter.6}% 36
+\BOOKMARK [2][-]{subsection.6.3.1}{対象データの多様化，結合，長期化}{section.6.3}% 37
+\BOOKMARK [2][-]{subsection.6.3.2}{知識間関係抽出手法の拡張}{section.6.3}% 38
+\BOOKMARK [0][-]{chapter.7}{結論}{}% 39
+\BOOKMARK [0][-]{chapter.7}{参考文献}{}% 40
+\BOOKMARK [0][-]{chapter.7}{謝辞}{}% 41
+\BOOKMARK [0][-]{appendix*.33}{発表文献}{}% 42

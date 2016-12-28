@@ -1,0 +1,39 @@
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  23 DEC 2016 23:53
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**abstract.tex
+(./abstract.tex
+pLaTeX2e <2016/11/29> (based on LaTeX2e <2016/03/31> patch level 3)
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+./abstract.tex:2: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 全
+      ての生徒に等しく，適切な教育を施すことは，教育の分野において，常に関心...
+
+? 
+./abstract.tex:2: Emergency stop.
+ ...                                              
+                                                  
+l.2 全
+      ての生徒に等しく，適切な教育を施すことは，教育の分野において，常に関心...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 493683
+ 179 string characters out of 6149652
+ 54106 words of memory out of 5000000
+ 3671 multiletter control sequences out of 15000+600000
+ 7511 words of font info for 31 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 5i,0n,4p,99b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
