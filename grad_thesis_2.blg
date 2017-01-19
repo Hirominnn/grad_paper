@@ -1,0 +1,51 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2016)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: grad_thesis_2.aux
+The style file: apalike.bst
+Database file #1: biblio.bib
+Warning--there's a number but no volume in liyanagunawardena2013impact
+Warning--empty journal in mcauley2010mooc
+Warning--empty booktitle in zaremba2015empirical
+You've used 87 entries,
+            1935 wiz_defined-function locations,
+            933 strings with 20217 characters,
+and the built_in function-call counts, 36623 in all, are:
+= -- 3549
+> -- 1748
+< -- 53
++ -- 627
+- -- 602
+* -- 3055
+:= -- 6363
+add.period$ -- 267
+call.type$ -- 87
+change.case$ -- 728
+chr.to.int$ -- 86
+cite$ -- 90
+duplicate$ -- 1400
+empty$ -- 2386
+format.name$ -- 723
+if$ -- 7157
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 86
+newline$ -- 434
+num.names$ -- 261
+pop$ -- 711
+preamble$ -- 1
+purify$ -- 732
+quote$ -- 0
+skip$ -- 1085
+stack$ -- 0
+substring$ -- 2245
+swap$ -- 238
+text.length$ -- 18
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 514
+warning$ -- 3
+while$ -- 276
+width$ -- 0
+write$ -- 1096
+is.kanji.str$ -- 0
+(There were 3 warnings)

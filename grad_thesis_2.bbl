@@ -1,0 +1,500 @@
+\begin{thebibliography}{}
+
+\bibitem[Abelson, 2008]{abelson2008creation}
+Abelson, H. (2008).
+\newblock The creation of opencourseware at mit.
+\newblock {\em Journal of Science Education and Technology}, 17(2):164--174.
+
+\bibitem[Aleven et~al., 2015]{aleven2015beginning}
+Aleven, V., Sewall, J., Popescu, O., Xhakaj, F., Chand, D., Baker, R., Wang,
+  Y., Siemens, G., Ros{\'e}, C., and Gasevic, D. (2015).
+\newblock The beginning of a beautiful friendship? intelligent tutoring systems
+  and moocs.
+\newblock In {\em International Conference on Artificial Intelligence in
+  Education}, pages 525--528. Springer.
+
+\bibitem[Bahdanau et~al., 2015]{bahdanau2015end}
+Bahdanau, D., Chorowski, J., Serdyuk, D., Brakel, P., and Bengio, Y. (2015).
+\newblock End-to-end attention-based large vocabulary speech recognition.
+\newblock {\em arXiv preprint arXiv:1508.04395}.
+
+\bibitem[Bastien et~al., 2012]{Bastien-Theano-2012}
+Bastien, F., Lamblin, P., Pascanu, R., Bergstra, J., Goodfellow, I.~J.,
+  Bergeron, A., Bouchard, N., and Bengio, Y. (2012).
+\newblock Theano: new features and speed improvements.
+\newblock Deep Learning and Unsupervised Feature Learning NIPS 2012 Workshop.
+
+\bibitem[Bellman and Corporation, 1957]{bellman1957dynamic}
+Bellman, R. and Corporation, R. (1957).
+\newblock {\em Dynamic Programming}.
+\newblock Rand Corporation research study. Princeton University Press.
+
+\bibitem[Bengio et~al., 1994]{bengio1994learning}
+Bengio, Y., Simard, P., and Frasconi, P. (1994).
+\newblock Learning long-term dependencies with gradient descent is difficult.
+\newblock {\em Neural Networks, IEEE Transactions on}, 5(2):157--166.
+
+\bibitem[Bergstra and Bengio, 2012]{bergstra2012random}
+Bergstra, J. and Bengio, Y. (2012).
+\newblock Random search for hyper-parameter optimization.
+\newblock {\em The Journal of Machine Learning Research}, 13(1):281--305.
+
+\bibitem[Bergstra et~al., 2010]{bergstra+al:2010-scipy}
+Bergstra, J., Breuleux, O., Bastien, F., Lamblin, P., Pascanu, R., Desjardins,
+  G., Turian, J., Warde-Farley, D., and Bengio, Y. (2010).
+\newblock Theano: a {CPU} and {GPU} math expression compiler.
+\newblock In {\em Proceedings of the Python for Scientific Computing Conference
+  ({SciPy})}.
+\newblock Oral Presentation.
+
+\bibitem[Biswas et~al., 2015]{biswassentiment}
+Biswas, S., Chadda, E., and Ahmad, F. (2015).
+\newblock Sentiment analysis with gated recurrent units.
+\newblock {\em Advances in Computer Science and Information Technology}.
+
+\bibitem[Bloom, 1968]{bloom1968learning}
+Bloom, B.~S. (1968).
+\newblock Learning for mastery. instruction and curriculum. regional education
+  laboratory for the carolinas and virginia, topical papers and reprints,
+  number 1.
+\newblock {\em Evaluation comment}, 1(2):n2.
+
+\bibitem[Carbonell, 1970]{carbonell1970ai}
+Carbonell, J.~R. (1970).
+\newblock Ai in cai: An artificial-intelligence approach to computer-assisted
+  instruction.
+\newblock {\em IEEE transactions on man-machine systems}, 11(4):190--202.
+
+\bibitem[Chen et~al., 2008]{chen2008mining}
+Chen, N.-S., Wei, C.-W., Chen, H.-J., et~al. (2008).
+\newblock Mining e-learning domain concept map from academic articles.
+\newblock {\em Computers \& Education}, 50(3):1009--1021.
+
+\bibitem[Cho et~al., 2014]{cho2014learning}
+Cho, K., Van~Merri{\"e}nboer, B., Gulcehre, C., Bahdanau, D., Bougares, F.,
+  Schwenk, H., and Bengio, Y. (2014).
+\newblock Learning phrase representations using rnn encoder-decoder for
+  statistical machine translation.
+\newblock {\em arXiv preprint arXiv:1406.1078}.
+
+\bibitem[Choi et~al., 2015]{choi2015doctor}
+Choi, E., Bahadori, M.~T., and Sun, J. (2015).
+\newblock Doctor ai: Predicting clinical events via recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1511.05942}.
+
+\bibitem[Chung et~al., 2014]{chung2014empirical}
+Chung, J., Gulcehre, C., Cho, K., and Bengio, Y. (2014).
+\newblock Empirical evaluation of gated recurrent neural networks on sequence
+  modeling.
+\newblock {\em arXiv preprint arXiv:1412.3555}.
+
+\bibitem[Chung et~al., 2015]{chung2015gated}
+Chung, J., Gulcehre, C., Cho, K., and Bengio, Y. (2015).
+\newblock Gated feedback recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1502.02367}.
+
+\bibitem[Clevert et~al., 2015]{clevert2015fast}
+Clevert, D.-A., Unterthiner, T., and Hochreiter, S. (2015).
+\newblock Fast and accurate deep network learning by exponential linear units
+  (elus).
+\newblock {\em arXiv preprint arXiv:1511.07289}.
+
+\bibitem[Corbett and Anderson, 1994]{corbett1994knowledge}
+Corbett, A.~T. and Anderson, J.~R. (1994).
+\newblock Knowledge tracing: Modeling the acquisition of procedural knowledge.
+\newblock {\em User modeling and user-adapted interaction}, 4(4):253--278.
+
+\bibitem[Dong et~al., 2015]{dong2015multi}
+Dong, D., Wu, H., He, W., Yu, D., and Wang, H. (2015).
+\newblock Multi-task learning for multiple language translation.
+\newblock In {\em Proceedings of the 53rd Annual Meeting of the Association for
+  Computational Linguistics and the 7th International Joint Conference on
+  Natural Language Processing}. ACL.
+
+\bibitem[Erhan et~al., 2010]{erhan2010does}
+Erhan, D., Bengio, Y., Courville, A., Manzagol, P.-A., Vincent, P., and Bengio,
+  S. (2010).
+\newblock Why does unsupervised pre-training help deep learning?
+\newblock {\em Journal of Machine Learning Research}, 11(Feb):625--660.
+
+\bibitem[FALAKMASIR et~al., 2015]{falakmasir2015spectral}
+FALAKMASIR, M., Yudelson, M., Ritter, S., and Koedinger, K. (2015).
+\newblock Spectral bayesian knowledge tracing.
+\newblock In {\em Proceedings of the 8th International Conference on
+  Educational Data Mining., OC Santos, JG Boticario, C. Romero, M. Pechenizkiy,
+  A. Merceron, P. Mitros, JM Luna, C. Mihaescu, P. Moreno, A. Hershkovitz, S.
+  Ventura, and M. Desmarais, Eds. Madrid, Spain}, pages 360--364.
+
+\bibitem[Friedman, 1997]{friedman1997bias}
+Friedman, J.~H. (1997).
+\newblock On bias, variance, 0/1―loss, and the curse-of-dimensionality.
+\newblock {\em Data mining and knowledge discovery}, 1(1):55--77.
+
+\bibitem[Glorot and Bengio, 2010]{glorot2010understanding}
+Glorot, X. and Bengio, Y. (2010).
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock In {\em International conference on artificial intelligence and
+  statistics}, pages 249--256.
+
+\bibitem[Graves and Schmidhuber, 2009]{graves2009offline}
+Graves, A. and Schmidhuber, J. (2009).
+\newblock Offline handwriting recognition with multidimensional recurrent
+  neural networks.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  545--552.
+
+\bibitem[Hidasi et~al., 2015]{hidasi2015session}
+Hidasi, B., Karatzoglou, A., Baltrunas, L., and Tikk, D. (2015).
+\newblock Session-based recommendations with recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1511.06939}.
+
+\bibitem[Hinton et~al., 2012]{hinton2012deep}
+Hinton, G., Deng, L., Yu, D., Dahl, G.~E., Mohamed, A.-r., Jaitly, N., Senior,
+  A., Vanhoucke, V., Nguyen, P., Sainath, T.~N., et~al. (2012).
+\newblock Deep neural networks for acoustic modeling in speech recognition: The
+  shared views of four research groups.
+\newblock {\em Signal Processing Magazine, IEEE}, 29(6):82--97.
+
+\bibitem[Hinton and Salakhutdinov, 2006]{hinton2006reducing}
+Hinton, G.~E. and Salakhutdinov, R.~R. (2006).
+\newblock Reducing the dimensionality of data with neural networks.
+\newblock {\em Science}, 313(5786):504--507.
+
+\bibitem[Hochreiter, 1998]{hochreiter1998vanishing}
+Hochreiter, S. (1998).
+\newblock The vanishing gradient problem during learning recurrent neural nets
+  and problem solutions.
+\newblock {\em International Journal of Uncertainty, Fuzziness and
+  Knowledge-Based Systems}, 6(02):107--116.
+
+\bibitem[Hochreiter and Schmidhuber, 1997]{hochreiter1997long}
+Hochreiter, S. and Schmidhuber, J. (1997).
+\newblock Long short-term memory.
+\newblock {\em Neural computation}, 9(8):1735--1780.
+
+\bibitem[Karpathy et~al., 2015]{karpathy2015visualizing}
+Karpathy, A., Johnson, J., and Li, F.-F. (2015).
+\newblock Visualizing and understanding recurrent networks.
+\newblock {\em arXiv preprint arXiv:1506.02078}.
+
+\bibitem[Keller, 1968]{keller1968good}
+Keller, F.~S. (1968).
+\newblock Good-bye, teacher...
+\newblock {\em Journal of applied behavior analysis}, 1(1):79.
+
+\bibitem[Kingma and Ba, 2014]{kingma2014adam}
+Kingma, D. and Ba, J. (2014).
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}.
+
+\bibitem[Kingma et~al., 2014]{kingma2014semi}
+Kingma, D.~P., Mohamed, S., Rezende, D.~J., and Welling, M. (2014).
+\newblock Semi-supervised learning with deep generative models.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  3581--3589.
+
+\bibitem[Krueger and Memisevic, 2015]{krueger2015regularizing}
+Krueger, D. and Memisevic, R. (2015).
+\newblock Regularizing rnns by stabilizing activations.
+\newblock {\em arXiv preprint arXiv:1511.08400}.
+
+\bibitem[Ku et~al., 1995]{ku1995disturbance}
+Ku, W., Storer, R.~H., and Georgakis, C. (1995).
+\newblock Disturbance detection and isolation by dynamic principal component
+  analysis.
+\newblock {\em Chemometrics and intelligent laboratory systems},
+  30(1):179--196.
+
+\bibitem[Kushner and Yin, 2003]{kushner2003stochastic}
+Kushner, H.~J. and Yin, G. (2003).
+\newblock {\em Stochastic approximation and recursive algorithms and
+  applications}, volume~35.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Larochelle et~al., 2007]{larochelle2007empirical}
+Larochelle, H., Erhan, D., Courville, A., Bergstra, J., and Bengio, Y. (2007).
+\newblock An empirical evaluation of deep architectures on problems with many
+  factors of variation.
+\newblock In {\em Proceedings of the 24th international conference on Machine
+  learning}, pages 473--480. ACM.
+
+\bibitem[Le et~al., 2015]{le2015simple}
+Le, Q.~V., Jaitly, N., and Hinton, G.~E. (2015).
+\newblock A simple way to initialize recurrent networks of rectified linear
+  units.
+\newblock {\em arXiv preprint arXiv:1504.00941}.
+
+\bibitem[Lipton et~al., 2015]{lipton2015learning}
+Lipton, Z.~C., Kale, D.~C., Elkan, C., and Wetzell, R. (2015).
+\newblock Learning to diagnose with lstm recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1511.03677}.
+
+\bibitem[Liyanagunawardena et~al., 2013]{liyanagunawardena2013impact}
+Liyanagunawardena, T., Williams, S., and Adams, A. (2013).
+\newblock The impact and reach of moocs: A developing countries’ perspective.
+\newblock {\em eLearning Papers}, (33).
+
+\bibitem[Louradour and Kermorvant, 2014]{louradour2014curriculum}
+Louradour, J. and Kermorvant, C. (2014).
+\newblock Curriculum learning for handwritten text line recognition.
+\newblock In {\em Document Analysis Systems (DAS), 2014 11th IAPR International
+  Workshop on}, pages 56--60. IEEE.
+
+\bibitem[MacHardy and Pardos, 2015]{machardy2015toward}
+MacHardy, Z. and Pardos, Z.~A. (2015).
+\newblock Toward the evaluation of educational videos using bayesian knowledge
+  tracing and big data.
+\newblock In {\em Proceedings of the Second (2015) ACM Conference on Learning@
+  Scale}, pages 347--350. ACM.
+
+\bibitem[McAuley et~al., 2010]{mcauley2010mooc}
+McAuley, A., Stewart, B., Siemens, G., and Cormier, D. (2010).
+\newblock The mooc model for digital practice.
+
+\bibitem[Midgley, 2014]{midgley2014goals}
+Midgley, C. (2014).
+\newblock {\em Goals, goal structures, and patterns of adaptive learning}.
+\newblock Routledge.
+
+\bibitem[Mikolov, 2012]{mikolov2012statistical}
+Mikolov, T. (2012).
+\newblock Statistical language models based on neural networks.
+\newblock {\em Presentation at Google, Mountain View, 2nd April}.
+
+\bibitem[Nair and Hinton, 2010]{nair2010rectified}
+Nair, V. and Hinton, G.~E. (2010).
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em Proceedings of the 27th International Conference on Machine
+  Learning (ICML-10)}, pages 807--814.
+
+\bibitem[Pappano, 2012]{pappano2012year}
+Pappano, L. (2012).
+\newblock The year of the mooc.
+\newblock {\em The New York Times}, 2(12):2012.
+
+\bibitem[Pascanu et~al., 2013]{pascanu2013difficulty}
+Pascanu, R., Mikolov, T., and Bengio, Y. (2013).
+\newblock On the difficulty of training recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1211.5063}.
+
+\bibitem[Pavlik~Jr et~al., 2009]{pavlik2009performance}
+Pavlik~Jr, P.~I., Cen, H., and Koedinger, K.~R. (2009).
+\newblock Performance factors analysis--a new alternative to knowledge tracing.
+\newblock {\em Online Submission}.
+
+\bibitem[Pearson, 1901]{pearson1901liii}
+Pearson, K. (1901).
+\newblock Liii. on lines and planes of closest fit to systems of points in
+  space.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 2(11):559--572.
+
+\bibitem[Pezeshki, 2015]{pezeshki2015sequence}
+Pezeshki, M. (2015).
+\newblock Sequence modeling using gated recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1501.00299}.
+
+\bibitem[Piccioli, 2014]{piccioli2014learning}
+Piccioli, V. (2014).
+\newblock E-learning market trends \& forecast 2014-2016 report.
+\newblock {\em Athens (GA)-USA}.
+
+\bibitem[Piech et~al., 2015]{piech2015deep}
+Piech, C., Bassen, J., Huang, J., Ganguli, S., Sahami, M., Guibas, L.~J., and
+  Sohl-Dickstein, J. (2015).
+\newblock Deep knowledge tracing.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  505--513.
+
+\bibitem[Robbins and Monro, 1951]{robbins1951stochastic}
+Robbins, H. and Monro, S. (1951).
+\newblock A stochastic approximation method.
+\newblock {\em The annals of mathematical statistics}, pages 400--407.
+
+\bibitem[Rosenblatt, 1958]{rosenblatt1958perceptron}
+Rosenblatt, F. (1958).
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, 65(6):386.
+
+\bibitem[Rumelhart et~al., 1988]{rumelhart1988learning}
+Rumelhart, D.~E., Hinton, G.~E., and Williams, R.~J. (1988).
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Cognitive modeling}, 5(3):1.
+
+\bibitem[Sak et~al., 2015]{sak2015fast}
+Sak, H., Senior, A., Rao, K., and Beaufays, F. (2015).
+\newblock Fast and accurate recurrent neural network acoustic models for speech
+  recognition.
+\newblock {\em arXiv preprint arXiv:1507.06947}.
+
+\bibitem[Sch{\"o}lkopf et~al., 1997]{scholkopf1997kernel}
+Sch{\"o}lkopf, B., Smola, A., and M{\"u}ller, K.-R. (1997).
+\newblock Kernel principal component analysis.
+\newblock In {\em International Conference on Artificial Neural Networks},
+  pages 583--588. Springer.
+
+\bibitem[Schroff et~al., 2015]{schroff2015facenet}
+Schroff, F., Kalenichenko, D., and Philbin, J. (2015).
+\newblock Facenet: A unified embedding for face recognition and clustering.
+\newblock {\em arXiv preprint arXiv:1503.03832}.
+
+\bibitem[Siemens, 2013]{siemens2013massive}
+Siemens, G. (2013).
+\newblock Massive open online courses: Innovation in education.
+\newblock {\em Open educational resources: Innovation, research and practice},
+  5.
+
+\bibitem[Silver et~al., 2016]{silver2016mastering}
+Silver, D., Huang, A., Maddison, C.~J., Guez, A., Sifre, L., Van Den~Driessche,
+  G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M.,
+  et~al. (2016).
+\newblock Mastering the game of go with deep neural networks and tree search.
+\newblock {\em Nature}, 529(7587):484--489.
+
+\bibitem[Sleeman and Brown, 1982]{sleeman1982intelligent}
+Sleeman, D. and Brown, J. (1982).
+\newblock {\em Intelligent tutoring systems}.
+\newblock Computers and people series. Academic Press.
+
+\bibitem[Srivastava et~al., 2014]{srivastava2014dropout}
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., and Salakhutdinov,
+  R. (2014).
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958.
+
+\bibitem[Stamper et~al., 2010]{kddcup2010bridge2006}
+Stamper, J., Niculescu-Mizil, A., Ritter, S., Gordon, G., and Koedinger, K.
+  (2010).
+\newblock Bridge to algebra 2006-2007. development data set from kdd cup 2010
+  educational data mining challenge.
+\newblock http://pslcdatashop.web.cmu.edu/KDDCup/downloads.jsp.
+
+\bibitem[Sutskever et~al., 2014]{sutskever2014sequence}
+Sutskever, I., Vinyals, O., and Le, Q.~V. (2014).
+\newblock Sequence to sequence learning with neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  3104--3112.
+
+\bibitem[Szegedy et~al., 2014]{szegedy2014going}
+Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., Erhan, D.,
+  Vanhoucke, V., and Rabinovich, A. (2014).
+\newblock Going deeper with convolutions.
+\newblock {\em arXiv preprint arXiv:1409.4842}.
+
+\bibitem[Tetko et~al., 1995]{tetko1995neural}
+Tetko, I.~V., Livingstone, D.~J., and Luik, A.~I. (1995).
+\newblock Neural network studies. 1. comparison of overfitting and
+  overtraining.
+\newblock {\em Journal of chemical information and computer sciences},
+  35(5):826--833.
+
+\bibitem[Tipping and Bishop, 1999]{tipping1999probabilistic}
+Tipping, M.~E. and Bishop, C.~M. (1999).
+\newblock Probabilistic principal component analysis.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 61(3):611--622.
+
+\bibitem[Trucano et~al., 2013]{trucano2013more}
+Trucano, M., Kendrick, C., and Gashurov, I. (2013).
+\newblock More about moocs and developing countries.
+
+\bibitem[Upbin, 2012]{upbin2012knewton}
+Upbin, B. (2012).
+\newblock Knewton is building the world’s smartest tutor.
+
+\bibitem[Vincent et~al., 2008]{vincent2008extracting}
+Vincent, P., Larochelle, H., Bengio, Y., and Manzagol, P.-A. (2008).
+\newblock Extracting and composing robust features with denoising autoencoders.
+\newblock In {\em Proceedings of the 25th international conference on Machine
+  learning}, pages 1096--1103. ACM.
+
+\bibitem[Vinyals et~al., 2014]{vinyals2014show}
+Vinyals, O., Toshev, A., Bengio, S., and Erhan, D. (2014).
+\newblock Show and tell: A neural image caption generator.
+\newblock {\em arXiv preprint arXiv:1411.4555}.
+
+\bibitem[Vondrick et~al., 2016]{vondrick2016generating}
+Vondrick, C., Pirsiavash, H., and Torralba, A. (2016).
+\newblock Generating videos with scene dynamics.
+\newblock In {\em Advances In Neural Information Processing Systems}, pages
+  613--621.
+
+\bibitem[Werbos, 1990]{werbos1990backpropagation}
+Werbos, P.~J. (1990).
+\newblock Backpropagation through time: what it does and how to do it.
+\newblock {\em Proceedings of the IEEE}, 78(10):1550--1560.
+
+\bibitem[Williams and Zipser, 1989]{williams1989learning}
+Williams, R.~J. and Zipser, D. (1989).
+\newblock A learning algorithm for continually running fully recurrent neural
+  networks.
+\newblock {\em Neural computation}, 1(2):270--280.
+
+\bibitem[Wold et~al., 1987]{wold1987principal}
+Wold, S., Esbensen, K., and Geladi, P. (1987).
+\newblock Principal component analysis.
+\newblock {\em Chemometrics and intelligent laboratory systems}, 2(1-3):37--52.
+
+\bibitem[Wu et~al., 2016]{wu2016google}
+Wu, Y., Schuster, M., Chen, Z., Le, Q.~V., Norouzi, M., Macherey, W., Krikun,
+  M., Cao, Y., Gao, Q., Macherey, K., et~al. (2016).
+\newblock Google's neural machine translation system: Bridging the gap between
+  human and machine translation.
+\newblock {\em arXiv preprint arXiv:1609.08144}.
+
+\bibitem[Xiong et~al., 2016a]{xiong2016achieving}
+Xiong, W., Droppo, J., Huang, X., Seide, F., Seltzer, M., Stolcke, A., Yu, D.,
+  and Zweig, G. (2016a).
+\newblock Achieving human parity in conversational speech recognition.
+\newblock {\em arXiv preprint arXiv:1610.05256}.
+
+\bibitem[Xiong et~al., 2016b]{xiong2016going}
+Xiong, X., Zhao, S., Van~Inwegen, E.~G., and Beck, J.~E. (2016b).
+\newblock Going deeper with deep knowledge tracing.
+\newblock In {\em Proceedings of the 9th International Conference on
+  Educational Data Mining (EDM 2016)}, pages 545--550.
+
+\bibitem[Xu et~al., 2015]{xu2015show}
+Xu, K., Ba, J., Kiros, R., Courville, A., Salakhutdinov, R., Zemel, R., and
+  Bengio, Y. (2015).
+\newblock Show, attend and tell: Neural image caption generation with visual
+  attention.
+\newblock {\em arXiv preprint arXiv:1502.03044}.
+
+\bibitem[Yin et~al., 2015]{yin2015neural}
+Yin, J., Jiang, X., Lu, Z., Shang, L., Li, H., and Li, X. (2015).
+\newblock Neural generative question answering.
+\newblock {\em arXiv preprint arXiv:1512.01337}.
+
+\bibitem[Yuan et~al., 2013]{yuan2013moocs}
+Yuan, L., Powell, S., and CETIS, J. (2013).
+\newblock Moocs and open education: Implications for higher education.
+
+\bibitem[Yudelson et~al., 2013]{yudelson2013individualized}
+Yudelson, M.~V., Koedinger, K.~R., and Gordon, G.~J. (2013).
+\newblock Individualized bayesian knowledge tracing models.
+\newblock In {\em Artificial Intelligence in Education}, pages 171--180.
+  Springer.
+
+\bibitem[Zaremba, 2015]{zaremba2015empirical}
+Zaremba, W. (2015).
+\newblock An empirical exploration of recurrent network architectures.
+
+\bibitem[Zeiler, 2012]{zeiler2012adadelta}
+Zeiler, M.~D. (2012).
+\newblock Adadelta: An adaptive learning rate method.
+\newblock {\em arXiv preprint arXiv:1212.5701}.
+
+\bibitem[三宅なほみ et~al., 2002]{三宅なほみ2002学習環境のデザイン実験}
+三宅なほみ, 三宅芳雄, and 白水始 (2002).
+\newblock 学習環境のデザイン実験 学習科学と認知科学.
+\newblock {\em 認知科学}, 9(3):328--337.
+
+\bibitem[白水始 et~al., 2014]{白水始2014学習科学の新展開}
+白水始, 三宅なほみ, and 益川弘如 (2014).
+\newblock 学習科学の新展開.
+\newblock {\em 認知科学}, 21(2):254--267.
+
+\end{thebibliography}

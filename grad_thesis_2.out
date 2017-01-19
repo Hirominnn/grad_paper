@@ -1,0 +1,67 @@
+\BOOKMARK [0][-]{chapter.1}{序論}{}% 1
+\BOOKMARK [1][-]{section.1.1}{研究の背景}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{教育の個人最適化の重要性}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{オンライン教育サービスの普及と学習効果分析の発展}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{深層学習の躍進}{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{研究の目的}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{本論文の構成}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{関連研究}{}% 8
+\BOOKMARK [1][-]{section.2.1}{学習科学と情報技術}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{オンライン教育サービスと大規模な学習効果分析}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{MOOCsとITS}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{学習行動ログの蓄積と大規模分析の活発化}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.3}{実証性の高いプラットフォームとしての性質}{section.2.2}% 13
+\BOOKMARK [1][-]{section.2.3}{深層学習}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.3.1}{深層学習にまつわる周辺知識}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.2}{深層学習の概要}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.3}{Recurreut Neural Networks}{section.2.3}% 17
+\BOOKMARK [1][-]{section.2.4}{知識獲得の予測}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.4.1}{Knowledge Tracingの定式化}{section.2.4}% 19
+\BOOKMARK [2][-]{subsection.2.4.2}{Bayesian Knowledge Tracing}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.3}{Performance Factor Analysis}{section.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.4.4}{Deep Knowledge Tracing}{section.2.4}% 22
+\BOOKMARK [2][-]{subsection.2.4.5}{知識獲得予測の手法におけるDKTの最適性}{section.2.4}% 23
+\BOOKMARK [1][-]{section.2.5}{次元削減手法}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.5.1}{Principal Component Analysis}{section.2.5}% 25
+\BOOKMARK [2][-]{subsection.2.5.2}{Autoencoder}{section.2.5}% 26
+\BOOKMARK [2][-]{subsection.2.5.3}{Embedding}{section.2.5}% 27
+\BOOKMARK [1][-]{section.2.6}{用語の定義}{chapter.2}% 28
+\BOOKMARK [2][-]{subsection.2.6.1}{知識獲得予測と回答正誤予測}{section.2.6}% 29
+\BOOKMARK [2][-]{subsection.2.6.2}{知識分類と知識タグ}{section.2.6}% 30
+\BOOKMARK [0][-]{chapter.3}{分析手法}{}% 31
+\BOOKMARK [1][-]{section.3.1}{分析手法全体の流れ}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.2}{データセットの作成}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.3}{提案手法による知識分類の学習}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.3.1}{DKTの拡張による写像関数の学習}{section.3.3}% 35
+\BOOKMARK [1][-]{section.3.4}{学習された知識分類の知識獲得予測性能に関する検証}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.5}{学習された知識分類の性質に関する比較分析}{chapter.3}% 37
+\BOOKMARK [0][-]{chapter.4}{データセット}{}% 38
+\BOOKMARK [1][-]{section.4.1}{ASSISTments 2009-2010}{chapter.4}% 39
+\BOOKMARK [2][-]{subsection.4.1.1}{ASSISTmentsのサービス}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.2}{対象データセット}{section.4.1}% 41
+\BOOKMARK [2][-]{subsection.4.1.3}{データの抽出}{section.4.1}% 42
+\BOOKMARK [1][-]{section.4.2}{Bridge to Algebra 2006-2007}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.2.1}{KDDCup}{section.4.2}% 44
+\BOOKMARK [2][-]{subsection.4.2.2}{対象データセット}{section.4.2}% 45
+\BOOKMARK [2][-]{subsection.4.2.3}{データの抽出}{section.4.2}% 46
+\BOOKMARK [1][-]{section.4.3}{データセットの概観}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{実験}{}% 48
+\BOOKMARK [1][-]{section.5.1}{実験設定}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.1.1}{知識分類学習モデルによる知識分類の学習}{section.5.1}% 50
+\BOOKMARK [2][-]{subsection.5.1.2}{学習された知識分類の知識獲得予測の性能に関する検証}{section.5.1}% 51
+\BOOKMARK [2][-]{subsection.5.1.3}{学習された知識分類の性質に関する比較分析}{section.5.1}% 52
+\BOOKMARK [1][-]{section.5.2}{実験結果}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.2.1}{各知識分類の知識獲得予測における予測性能}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.2}{学習された知識分類の可視化と概観}{section.5.2}% 55
+\BOOKMARK [2][-]{subsection.5.2.3}{学習された知識分類の比較分析}{section.5.2}% 56
+\BOOKMARK [0][-]{chapter.6}{考察}{}% 57
+\BOOKMARK [1][-]{section.6.1}{知識分類学習モデルの有効性}{chapter.6}% 58
+\BOOKMARK [1][-]{section.6.2}{各知識分類の性質と知識獲得予測に与える影響}{chapter.6}% 59
+\BOOKMARK [1][-]{section.6.3}{本手法の他データへの適用可能性}{chapter.6}% 60
+\BOOKMARK [1][-]{section.6.4}{教育現場への適用}{chapter.6}% 61
+\BOOKMARK [1][-]{section.6.5}{今後の展望}{chapter.6}% 62
+\BOOKMARK [2][-]{subsection.6.5.1}{教育学における対象データの拡大}{section.6.5}% 63
+\BOOKMARK [2][-]{subsection.6.5.2}{教育学以外の分野への応用}{section.6.5}% 64
+\BOOKMARK [0][-]{chapter.7}{結論}{}% 65
+\BOOKMARK [0][-]{chapter.7}{参考文献}{}% 66
+\BOOKMARK [0][-]{chapter*.16}{謝辞}{}% 67
