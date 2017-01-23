@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  12 JAN 2017 14:51
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  24 JAN 2017 02:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -352,31 +352,67 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2230.
 LaTeX Info: Redefining \labelcref on input line 2230.
 LaTeX Info: Redefining \labelcpageref on input line 2230.
 )
-(./grad_thesis.aux)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \iftdir \sbox \@tempboxa {#1\hskip 1zw#2}\else \sbox \@tempboxa {#1: #2}\fi \
+ifdim \wd \@tempboxa >\hsize \iftdir #1\hskip 1zw#2\relax \par \else #1: #2\rel
+ax \par \fi \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa
+ \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count135
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: hypcap package is loaded.
+)
+\c@subfigure=\count136
+\c@subtable=\count137
+) (./grad_thesis.aux)
 \openout1 = `grad_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 Package chapterbib Info: The sectionbib option changes "\chapter *" to "\sectio
-n *" in \thebibliography on input line 30.
+n *" in \thebibliography on input line 33.
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -384,24 +420,26 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count135
+\c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
 (./grad_thesis.out) (./grad_thesis.out)
 \@outlinefile=\write3
 \openout3 = `grad_thesis.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 65.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 68.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 65.
- (./abstract.tex [2
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 68.
+ (./abstract_2.tex [2
 
 
 ]) [3]
@@ -432,13 +470,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [4
 
-] (./grad_thesis.lot)
+] [5] (./grad_thesis.lot)
 \tf@lot=\write6
 \openout6 = `grad_thesis.lot'.
 
- [5
+ [6
 
-] (./chapter01.tex
+] (./chapter01_3.tex
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 11.
@@ -451,7 +489,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 [1
 
 ]
-Overfull \hbox (0.81808pt too wide) in paragraph at lines 56--66
+Overfull \hbox (0.81808pt too wide) in paragraph at lines 51--61
 []\JY1/mc/m/n/10.95 オンライン教育サ ービスの一つである \OT1/cmr/m/n/10.95 Mas-
 sive Open On-line Courses(MOOCs) [[]McAuley
  []
@@ -462,106 +500,185 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3] [4]
-File: ./img/problem.png Graphic file (type bmp)
- <./img/problem.png>
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 170.
+[2] [3]
+File: ./img/problem2.png Graphic file (type bmp)
+ <./img/problem2.png> [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 159.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 159.
  [5])
-(./chapter02.tex [6] [7]
+(./chapter02_2.tex [6]
 第 2 章
-[8
+[7
 
-]
+] [8]
 File: ./img/coursera.png Graphic file (type bmp)
  <./img/coursera.png>
 File: ./img/jmooc.png Graphic file (type bmp)
  <./img/jmooc.png>
-Overfull \hbox (43.59872pt too wide) in paragraph at lines 79--91
- | [] 
+Overfull \hbox (41.80255pt too wide) in paragraph at lines 133--150
+ [] 
  []
 
 [9]
 File: ./img/knewton.png Graphic file (type bmp)
- <./img/knewton.png> [10] [11] [12] [13]
-File: ./img/RNN.pdf Graphic file (type pdf)
- <./img/RNN.pdf> [14]
+ <./img/knewton.png> [10] [11] [12]
+File: ./img/neuron.png Graphic file (type bmp)
+ <./img/neuron.png>
+File: ./img/neuralnetwork.png Graphic file (type bmp)
+
+<./img/neuralnetwork.png>
+File: ./img/deeplearning.png Graphic file (type bmp)
+ <./img/deeplearning.png>
+Overfull \hbox (1.80255pt too wide) in paragraph at lines 272--284
+ | [] 
+ []
+
+[13] [14] [15]
+File: ./img/rnnFold.png Graphic file (type bmp)
+ <./img/rnnFold.png>
+File: ./img/rnnUnfold.png Graphic file (type bmp)
+ <./img/rnnUnfold.png>
+Overfull \hbox (1.80255pt too wide) in paragraph at lines 389--401
+ | [] 
+ []
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 316.
- [15] [16]
-[17] [18]
+put line 438.
+[16] [17] [18] [19]
 
 LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 454.
+(Font)              using `JT1/mc/m/n' instead on input line 576.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 454.
+(Font)              using `JY1/mc/m/n' instead on input line 576.
 
-[19] [20] [21] [22] [23] [24] [25] [26] [27] [28]
+[20] [21] [22] [23] [24] [25] [26] [27] [28] [29]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 864.
+(amsmath)                 on input line 987.
 
-[29]) (./chapter03.tex [30] [31]
+[30] [31]) (./chapter03_4.tex [32]
 第 3 章
-[32
-
-]
 File: ./img/workflow.png Graphic file (type bmp)
- <./img/workflow.png> [33] [34] [35] [36]
+<./img/workflow.png> [33
+
+] [34] [35] [36] [37]
 File: ./img/model.png Graphic file (type bmp)
- <./img/model.png> [37]
-
-LaTeX Warning: Reference `eq:autoencoder_hidden,eq:autoencoder_reconstruct' on 
-page 38 undefined on input line 277.
-
-[38] [39] [40]) (./chapter04.tex [41]
+ <./img/model.png> [38] [39]
+[40] [41]) (./chapter04_2.tex [42]
 第 4 章
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--43
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
 [][][][]$\OT1/cmtt/m/n/9 https : / / sites . google . com / site / assistmentsd
 ata / home / assistment-[]2009-[]2010-[]data /
  []
 
-[42
+[43
 
-] [43]
-
-LaTeX Warning: Reference `fig:assistmets' on page 44 undefined on input line 83
-.
-
-File: ./img/assistments_problem_dist.png Graphic file (type bmp)
-<./img/assistments_problem_dist.png>
-File: ./img/kdd_problem_dist.png Graphic file (type bmp)
- <./img/kdd_problem_dist.png>
-Overfull \hbox (43.59872pt too wide) in paragraph at lines 101--113
+] [44]
+File: ./img/assistmentsProblemDist.png Graphic file (type bmp)
+ <./img/assistmentsProblemDist.png>
+File: ./img/kddProblemDist.png Graphic file (type bmp)
+ <./img/kddProblemDist.png>
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 102--116
  | [] 
  []
 
-[44] [45]) (./chapter05.tex [46] [47]
+[45] [46] [47]) (./chapter05_2.tex [48]
 第 5 章
-[48
+[49
 
-]
+] [50] [51] [52]
+File: ./img/aSimpleNetwork.png Graphic file (type bmp)
+ <./img/aSimpleNetwork.png>
+File: ./img/kSimpleNetwork.png Graphic file (type bmp)
+ <./img/kSimpleNetwork.png>
+Overfull \hbox (41.80255pt too wide) in paragraph at lines 206--218
+ [] 
+ []
 
-LaTeX Warning: Reference `eq:reconstruction_error' on page 49 undefined on inpu
-t line 57.
+File: ./img/aNetwork.png Graphic file (type bmp)
+<./img/aNetwork.png>
+File: ./img/kNetwork.png Graphic file (type bmp)
+ <./img/kNetwork.png>
+Overfull \hbox (41.80255pt too wide) in paragraph at lines 226--238
+ [] 
+ []
 
-[49] [50] [51]) (./chapter06.tex [52]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: ./img/aTable.png Graphic file (type bmp)
+<./img/aTable.png>
+File: ./img/kTable.png Graphic file (type bmp)
+ <./img/kTable.png>
+Overfull \hbox (74.68985pt too wide) in paragraph at lines 262--263
+ [] 
+ []
+
+File: ./img/networkflow.png Graphic file (type bmp)
+<./img/networkflow.png> [53]
+File: ./img/aAppearHist.png Graphic file (type bmp)
+ <./img/aAppearHist.png>
+File: ./img/aAppearHist.png Graphic file (type bmp)
+ <./img/aAppearHist.png>
+Overfull \hbox (43.59872pt too wide) in paragraph at lines 294--306
+ | [] 
+ []
+
+
+LaTeX Warning: Reference `fig:aNetwork' on page 54 undefined on input line 310.
+
+
+
+LaTeX Warning: Reference `fig:kNetwork' on page 54 undefined on input line 310.
+
+
+File: ./img/aNetworkConcentrate.png Graphic file (type bmp)
+<./img/aNetworkConcentrate.png>
+File: ./img/kNetworkConcentrate.png Graphic file (type bmp)
+ <./img/kNetworkConcentrate.png>
+Underfull \hbox (badness 1515) in paragraph at lines 331--331
+[]\JY1/mc/m/n/10.95 図 \OT1/cmr/m/n/10.95 5.9: |[]\JY1/mc/m/n/10.95 多くの抽出
+タグが紐づく既存タグ
+ []
+
+
+Overfull \hbox (43.59872pt too wide) in paragraph at lines 320--332
+ | [] 
+ []
+
+File: ./img/aNetworkLittle.png Graphic file (type bmp)
+<./img/aNetworkLittle.png>
+File: ./img/kNetworkLittle.png Graphic file (type bmp)
+ <./img/kNetworkLittle.png>
+Overfull \hbox (43.59872pt too wide) in paragraph at lines 337--349
+ | [] 
+ []
+
+File: ./img/aNetworkSimilar.png Graphic file (type bmp)
+<./img/aNetworkSimilar.png>
+File: ./img/kNetworkSimilar.png Graphic file (type bmp)
+ <./img/kNetworkSimilar.png>
+Overfull \hbox (43.59872pt too wide) in paragraph at lines 354--366
+ | [] 
+ []
+
+) (./chapter06_2.tex [54] [55] [56] [57] [58]
 第 6 章
-[53
+[59
 
-] [54] [55] [56] [57]) (./chapter07.tex [58]
+] [60] [61] [62] [63] [64] [65]) (./chapter07.tex [66]
 第 7 章
-) [59
+) [67
 
 ] (./grad_thesis.bbl
 
@@ -572,47 +689,47 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-[60
+[68
 
-] [61]
-Underfull \hbox (badness 2119) in paragraph at lines 115--121
+] [69]
+Underfull \hbox (badness 2119) in paragraph at lines 121--127
 []\OT1/cmr/m/n/10.95 FALAKMASIR, M., Yudel-son, M., Rit-ter, S., and
  []
 
-[62] [63] [64]
-Underfull \hbox (badness 3250) in paragraph at lines 323--326
+[70] [71] [72] [73]
+Underfull \hbox (badness 3250) in paragraph at lines 350--353
 \OT1/cmr/m/n/10.95 A uni-fied em-bed-ding for face recog-ni-tion and clus-ter-i
 ng.  \OT1/cmr/m/it/10.95 arXiv preprint
  []
 
-[65]
-Underfull \hbox (badness 7925) in paragraph at lines 347--352
+
+Underfull \hbox (badness 7925) in paragraph at lines 379--384
 []\OT1/cmr/m/n/10.95 Stamper, J., Niculescu-Mizil, A., Rit-ter, S., Gor-don,
  []
 
 
-Underfull \hbox (badness 7540) in paragraph at lines 347--352
+Underfull \hbox (badness 7540) in paragraph at lines 379--384
 \OT1/cmr/m/n/10.95 G., and Koedinger, K. (2010).  Bridge to al-ge-bra 2006-2007
 . de-vel-
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 347--352
+Underfull \hbox (badness 4531) in paragraph at lines 379--384
 \OT1/cmr/m/n/10.95 op-ment data set from kdd cup 2010 ed-u-ca-tional data min-i
 ng chal-lenge.
  []
 
-[66] [67]) (./acknowledgement.tex [68] [69
+[74] [75]) (./acknowledgement.tex [76] [77
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
- [70]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
+ [78]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
  (./grad_thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 115.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 118.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `grad_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2ACCDE43044B1414F4A25DCEC769FD11;5473.
+(rerunfilecheck)             Checksum: A79E3C1DC47AF4864C8A6E29BBE34C78;5831.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -620,18 +737,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 8208 strings out of 493683
- 129038 string characters out of 6149652
- 242012 words of memory out of 5000000
- 11626 multiletter control sequences out of 15000+600000
+ 9393 strings out of 493683
+ 151109 string characters out of 6149652
+ 259238 words of memory out of 5000000
+ 12784 multiletter control sequences out of 15000+600000
  22986 words of font info for 91 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 29i,13n,43p,318b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,13n,44p,320b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on grad_thesis.dvi (78 pages, 331340 bytes).
+Output written on grad_thesis.dvi (87 pages, 379324 bytes).

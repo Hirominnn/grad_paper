@@ -3,17 +3,17 @@
 \BOOKMARK [2][-]{subsection.1.1.1}{教育の個人最適化の重要性}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{オンライン教育サービスの普及と学習効果分析の発展}{section.1.1}% 4
 \BOOKMARK [2][-]{subsection.1.1.3}{深層学習の躍進}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{研究目的}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.3}{本論文の構成}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{関連研究}{}% 8
-\BOOKMARK [1][-]{section.2.1}{教育の個人最適化の現状}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{オンライン教育サービスと大規模分析}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.1}{Massive Open Online Courses}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.2}{Intelligent Tutoring System}{section.2.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.3}{学習行動ログの蓄積と大規模分析の活発化}{section.2.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.4}{個人が利用するプラットフォームとしての性質}{section.2.2}% 14
+\BOOKMARK [1][-]{section.1.2}{知識獲得予測の問題点}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{研究の目的}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{本論文の構成}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{関連研究}{}% 9
+\BOOKMARK [1][-]{section.2.1}{学習科学と情報技術}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{オンライン教育サービスと大規模な学習効果分析}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{MOOCsとITS}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.2}{学習行動ログの蓄積と大規模分析の活発化}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.3}{実証性の高いプラットフォームとしての性質}{section.2.2}% 14
 \BOOKMARK [1][-]{section.2.3}{深層学習}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.3.1}{深層学習にまつわる周辺知識}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.1}{ニューラルネットワーク}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.2}{深層学習の概要}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.3}{Recurreut Neural Networks}{section.2.3}% 18
 \BOOKMARK [1][-]{section.2.4}{知識獲得の予測}{chapter.2}% 19
@@ -42,7 +42,7 @@
 \BOOKMARK [2][-]{subsection.4.1.1}{ASSISTmentsのサービス}{section.4.1}% 42
 \BOOKMARK [2][-]{subsection.4.1.2}{対象データセット}{section.4.1}% 43
 \BOOKMARK [2][-]{subsection.4.1.3}{データの抽出}{section.4.1}% 44
-\BOOKMARK [1][-]{section.4.2}{bridge to algebra 2006-2007}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.2}{Bridge to Algebra 2006-2007}{chapter.4}% 45
 \BOOKMARK [2][-]{subsection.4.2.1}{KDDCup}{section.4.2}% 46
 \BOOKMARK [2][-]{subsection.4.2.2}{対象データセット}{section.4.2}% 47
 \BOOKMARK [2][-]{subsection.4.2.3}{データの抽出}{section.4.2}% 48
@@ -50,20 +50,24 @@
 \BOOKMARK [0][-]{chapter.5}{実験}{}% 50
 \BOOKMARK [1][-]{section.5.1}{実験設定}{chapter.5}% 51
 \BOOKMARK [2][-]{subsection.5.1.1}{知識分類学習モデルによる知識分類の学習}{section.5.1}% 52
-\BOOKMARK [2][-]{subsection.5.1.2}{学習された知識分類の知識獲得予測性能に関する検証}{section.5.1}% 53
+\BOOKMARK [2][-]{subsection.5.1.2}{学習された知識分類の知識獲得予測の性能に関する検証}{section.5.1}% 53
 \BOOKMARK [2][-]{subsection.5.1.3}{学習された知識分類の性質に関する比較分析}{section.5.1}% 54
 \BOOKMARK [1][-]{section.5.2}{実験結果}{chapter.5}% 55
 \BOOKMARK [2][-]{subsection.5.2.1}{各知識分類の知識獲得予測における予測性能}{section.5.2}% 56
-\BOOKMARK [2][-]{subsection.5.2.2}{学習された知識分類の可視化と概観}{section.5.2}% 57
-\BOOKMARK [2][-]{subsection.5.2.3}{学習された知識分類の比較分析}{section.5.2}% 58
+\BOOKMARK [2][-]{subsection.5.2.2}{抽出タグと既存タグの関係の概観}{section.5.2}% 57
+\BOOKMARK [2][-]{subsection.5.2.3}{抽出タグと既存タグの比較分析}{section.5.2}% 58
 \BOOKMARK [0][-]{chapter.6}{考察}{}% 59
-\BOOKMARK [1][-]{section.6.1}{知識分類学習モデルの有効性}{chapter.6}% 60
-\BOOKMARK [1][-]{section.6.2}{各知識分類の性質と知識獲得予測に与える影響}{chapter.6}% 61
-\BOOKMARK [1][-]{section.6.3}{本手法の他データへの適用可能性}{chapter.6}% 62
-\BOOKMARK [1][-]{section.6.4}{教育現場への適用}{chapter.6}% 63
-\BOOKMARK [1][-]{section.6.5}{今後の展望}{chapter.6}% 64
-\BOOKMARK [2][-]{subsection.6.5.1}{教育学における対象データの拡大}{section.6.5}% 65
-\BOOKMARK [2][-]{subsection.6.5.2}{教育学以外の分野への応用}{section.6.5}% 66
-\BOOKMARK [0][-]{chapter.7}{結論}{}% 67
-\BOOKMARK [0][-]{chapter.7}{参考文献}{}% 68
-\BOOKMARK [0][-]{chapter*.16}{謝辞}{}% 69
+\BOOKMARK [1][-]{section.6.1}{知識分類学習モデルと抽出タグの解釈}{chapter.6}% 60
+\BOOKMARK [2][-]{subsection.6.1.1}{知識分類学習モデルの有効性}{section.6.1}% 61
+\BOOKMARK [2][-]{subsection.6.1.2}{各知識分類の性質と知識獲得予測に与える影響}{section.6.1}% 62
+\BOOKMARK [1][-]{section.6.2}{本手法の汎用性と実用性}{chapter.6}% 63
+\BOOKMARK [2][-]{subsection.6.2.1}{学習された知識分類の汎用性}{section.6.2}% 64
+\BOOKMARK [1][-]{section.6.3}{本手法の他データへの適用可能性}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.4}{教育現場への適用}{chapter.6}% 66
+\BOOKMARK [1][-]{section.6.5}{今後の展望}{chapter.6}% 67
+\BOOKMARK [2][-]{subsection.6.5.1}{知識分類学習モデルの改善}{section.6.5}% 68
+\BOOKMARK [2][-]{subsection.6.5.2}{教育学における対象データの拡大}{section.6.5}% 69
+\BOOKMARK [2][-]{subsection.6.5.3}{教育学以外の分野への応用}{section.6.5}% 70
+\BOOKMARK [0][-]{chapter.7}{結論}{}% 71
+\BOOKMARK [0][-]{chapter.7}{参考文献}{}% 72
+\BOOKMARK [0][-]{chapter*.14}{謝辞}{}% 73

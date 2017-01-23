@@ -59,6 +59,12 @@ Bloom, B.~S. (1968).
   number 1.
 \newblock {\em Evaluation comment}, 1(2):n2.
 
+\bibitem[Carbonell, 1970]{carbonell1970ai}
+Carbonell, J.~R. (1970).
+\newblock Ai in cai: An artificial-intelligence approach to computer-assisted
+  instruction.
+\newblock {\em IEEE transactions on man-machine systems}, 11(4):190--202.
+
 \bibitem[Chen et~al., 2008]{chen2008mining}
 Chen, N.-S., Wei, C.-W., Chen, H.-J., et~al. (2008).
 \newblock Mining e-learning domain concept map from academic articles.
@@ -167,6 +173,11 @@ Hochreiter, S. and Schmidhuber, J. (1997).
 \newblock Long short-term memory.
 \newblock {\em Neural computation}, 9(8):1735--1780.
 
+\bibitem[Jang et~al., 2016]{jang2016categorical}
+Jang, E., Gu, S., and Poole, B. (2016).
+\newblock Categorical reparameterization with gumbel-softmax.
+\newblock {\em arXiv preprint arXiv:1611.01144}.
+
 \bibitem[Karpathy et~al., 2015]{karpathy2015visualizing}
 Karpathy, A., Johnson, J., and Li, F.-F. (2015).
 \newblock Visualizing and understanding recurrent networks.
@@ -206,12 +217,6 @@ Kushner, H.~J. and Yin, G. (2003).
   applications}, volume~35.
 \newblock Springer Science \& Business Media.
 
-\bibitem[Lage et~al., 2000]{lage2000inverting}
-Lage, M.~J., Platt, G.~J., and Treglia, M. (2000).
-\newblock Inverting the classroom: A gateway to creating an inclusive learning
-  environment.
-\newblock {\em The Journal of Economic Education}, 31(1):30--43.
-
 \bibitem[Larochelle et~al., 2007]{larochelle2007empirical}
 Larochelle, H., Erhan, D., Courville, A., Bergstra, J., and Bengio, Y. (2007).
 \newblock An empirical evaluation of deep architectures on problems with many
@@ -248,9 +253,20 @@ MacHardy, Z. and Pardos, Z.~A. (2015).
 \newblock In {\em Proceedings of the Second (2015) ACM Conference on Learning@
   Scale}, pages 347--350. ACM.
 
+\bibitem[Maddison et~al., 2016]{maddison2016concrete}
+Maddison, C.~J., Mnih, A., and Teh, Y.~W. (2016).
+\newblock The concrete distribution: A continuous relaxation of discrete random
+  variables.
+\newblock {\em arXiv preprint arXiv:1611.00712}.
+
 \bibitem[McAuley et~al., 2010]{mcauley2010mooc}
 McAuley, A., Stewart, B., Siemens, G., and Cormier, D. (2010).
 \newblock The mooc model for digital practice.
+
+\bibitem[Midgley, 2014]{midgley2014goals}
+Midgley, C. (2014).
+\newblock {\em Goals, goal structures, and patterns of adaptive learning}.
+\newblock Routledge.
 
 \bibitem[Mikolov, 2012]{mikolov2012statistical}
 Mikolov, T. (2012).
@@ -307,6 +323,17 @@ Robbins, H. and Monro, S. (1951).
 \newblock A stochastic approximation method.
 \newblock {\em The annals of mathematical statistics}, pages 400--407.
 
+\bibitem[Rosenblatt, 1958]{rosenblatt1958perceptron}
+Rosenblatt, F. (1958).
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, 65(6):386.
+
+\bibitem[Rumelhart et~al., 1988]{rumelhart1988learning}
+Rumelhart, D.~E., Hinton, G.~E., and Williams, R.~J. (1988).
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Cognitive modeling}, 5(3):1.
+
 \bibitem[Sak et~al., 2015]{sak2015fast}
 Sak, H., Senior, A., Rao, K., and Beaufays, F. (2015).
 \newblock Fast and accurate recurrent neural network acoustic models for speech
@@ -336,6 +363,11 @@ Silver, D., Huang, A., Maddison, C.~J., Guez, A., Sifre, L., Van Den~Driessche,
   et~al. (2016).
 \newblock Mastering the game of go with deep neural networks and tree search.
 \newblock {\em Nature}, 529(7587):484--489.
+
+\bibitem[Sleeman and Brown, 1982]{sleeman1982intelligent}
+Sleeman, D. and Brown, J. (1982).
+\newblock {\em Intelligent tutoring systems}.
+\newblock Computers and people series. Academic Press.
 
 \bibitem[Srivastava et~al., 2014]{srivastava2014dropout}
 Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., and Salakhutdinov,
@@ -466,9 +498,14 @@ Zeiler, M.~D. (2012).
 \newblock Adadelta: An adaptive learning rate method.
 \newblock {\em arXiv preprint arXiv:1212.5701}.
 
-\bibitem[重田勝介, 2014]{重田勝介2014反転授業}
-重田勝介 (2014).
-\newblock 反転授業 ict による教育改革の進展.
-\newblock {\em 情報管理}, 56(10):677--684.
+\bibitem[三宅なほみ et~al., 2002]{三宅なほみ2002学習環境のデザイン実験}
+三宅なほみ, 三宅芳雄, and 白水始 (2002).
+\newblock 学習環境のデザイン実験 学習科学と認知科学.
+\newblock {\em 認知科学}, 9(3):328--337.
+
+\bibitem[白水始 et~al., 2014]{白水始2014学習科学の新展開}
+白水始, 三宅なほみ, and 益川弘如 (2014).
+\newblock 学習科学の新展開.
+\newblock {\em 認知科学}, 21(2):254--267.
 
 \end{thebibliography}

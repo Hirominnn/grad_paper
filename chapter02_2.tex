@@ -129,17 +129,23 @@ MOOCsが教育に与える影響は大きく，その影響や可能性を分析
 \begin{figure}[htb]
 \begin{center}
 %\hspace*{-40pt}\makebox[1.2\textwidth][c]{
-\makebox[1.2\textwidth][c]{
-	\minipage{0.53\textwidth}
-		\includegraphics[width=180pt]{./img/coursera.png}
+%\makebox[1.2\textwidth][c]{
+\makebox[1.1\textwidth][c]{
+	%\begin{center}
+	\minipage{0.55\textwidth}
+		\centering\includegraphics[width=200pt]{./img/coursera.png}
 		\caption{Courseraのイメージ}
 		\label{fig:cousera}
-	\endminipage\hfill
-	\minipage{0.53\textwidth}
-		\includegraphics[width=180pt]{./img/jmooc.png}
+	\endminipage
+	\hfill
+	%\end{center}	
+	%\begin{center}
+	\minipage{0.55\textwidth}
+		\centering\includegraphics[width=200pt]{./img/jmooc.png}
 		\caption{JMOOCのイメージ}
 		\label{fig:jmooc}
-	\endminipage\hfill
+	\endminipage
+	%\end{center}	
 }
 \end{center}
 \end{figure}
@@ -226,13 +232,6 @@ MOOCsやITSを始めとするオンライン教育サービスは，
 次に，深層学習について述べる．
 
 
-%次に，多様な研究分野に続き，教育分野の分析においてもブレークスルーを生んだ深層学習について述べるが，
-%その基礎知識として機械学習やニューラルネットワークについて概説した後，
-%層学習について述べる．
-
-% 機械学習　教師あり学習と教師なし学習
-% ニューラルネットワーク　活性化関数　　勾配法
-
 \section{深層学習}
 
 本研究で用いる技術の核となっている，深層学習について述べる．
@@ -241,43 +240,6 @@ MOOCsやITSを始めとするオンライン教育サービスは，
 深層学習の概要について述べ，
 さらに本研究で用いる深層学習モデルであるRecurrent Neural Networksについて詳述する．
 
-%\subsection{深層学習にまつわる周辺知識}
-%深層学習について述べる前に，
-%深層学習を理解する上で必要となる前提知識を，以下の2つの項目に分けて述べる．
-%
-%\begin{enumerate}
-%	\item 機械学習
-%	\item ニューラルネットワーク
-%\end{enumerate}
-%
-%深層学習は，機械学習という研究領域における一分野であり，
-%その中でもニューラルネットワークという特殊な構造を拡張したものであることを説明する．
-
-
-%\subsubsection{機械学習}
-%機械学習とは，「明示的にプログラミングすることなく，コンピュータに行動させるようにする科学」と定義される，人工知能研究の一分野である[参考文献]．
-%観測データの集合から，そのデータに潜在する特徴的なパターンを抽出し，そのパターンに基づいて新たなデータを予測するもので，
-%歴史的には，人間が生きていく上で，自分の得た情報の中から後に再利用できそうな知識を獲得する，という過程を，コンピュータにおいて実現したいという動機から生じた研究分野である．
-%
-%
-%機械学習は，その性質により幾つかの系統が存在するが，代表的なものは「教師あり学習(supervised learning)」と「教師なし学習(unsupervised learning)」である．
-%教師あり学習は，入力データに加え，「ラベル」と呼ばれる，入力データに他する望ましい出力が事前に与えられた状態で学習を行うものである．
-%学習によって得られた，入力データをラベルに適切に変換する写像関数を用いることで，過去のデータから将来起こりそうな事象を予測する用途などに使われることが多く，
-%例えばxxxやxxxなどに利用されている．
-%一方，教師なし学習では，入力データが与えられるのみで，入力データに対するラベルは与えられない．
-%そのため，与えられたデータを分析し，特徴的な構造を見つけ出すような用途に使われることが多く，
-%例えばxxxやxxxなどに利用されている．
-%
-%
-%機械学習においては，アルゴリズムやデータの扱い方に様々な工夫が行われてきたものの，
-%研究分野の根幹となっている「人工知能」を作成するという目的を達成するには困難が残っていた．
-%機械学習の手法は，人間にとっては困難な，大規模データの分析には有効だったものの，
-%人間にとっては簡単な，手を動かしたり，物体を認識したりという基本的な処理には不向きであった．
-%従来の機械学習では，観測されたデータから人間が特徴を判断し，モデルが設定した目的を達成できるように素性を作成して入力データを設計していたが，
-%こうして人間の手によって設計された素性を用いる方法では，人間の脳で実際に起こっている処理を再現できないことがわかった．
-%
-%このような背景から，人間の脳のメカニズムをコンピュータ上で人工的に作り出すことで，
-%人間の脳が行っている複雑な処理を再現しようという目的の元作り出されたモデル構造が，次に述べるニューラルネットワークである．
 
 
 \subsection{ニューラルネットワーク}
@@ -306,15 +268,16 @@ MOOCsやITSを始めとするオンライン教育サービスは，
 
 \begin{figure}[t]
 \begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/neuralnetwork.png}
-		\caption{ニューラルネットワークのモデル構造}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-40pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.55\textwidth}
+		\centering\includegraphics[height=150pt]{./img/neuralnetwork.png}
+		\caption{パーセプトロンの構造}
 		\label{fig:neuralnetwork}
 	\endminipage\hfill
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/deeplearning.png}
-		\caption{深層学習のモデル構造}
+	\minipage{0.55\textwidth}
+		\centering\includegraphics[height=150pt]{./img/deeplearning.png}
+		\caption{多層パーセプトロンの構造}
 		\label{fig:deeplearning}
 	\endminipage\hfill
 }
@@ -423,16 +386,16 @@ RNNは深層ニューラルネットワークの一種で，主に系列デー�
 % - RNNの構造の概略
 \begin{figure}[t]
 \begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/rnn_fold.png}
+\hspace*{-40pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.35\textwidth}
+		\centering\includegraphics[height=100pt]{./img/rnnFold.png}
 		\caption{RNNの基本構造}
-		\label{fig:rnn_fold}
+		\label{fig:rnnFold}
 	\endminipage\hfill
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/rnn_unfold.png}
+	\minipage{0.75\textwidth}
+		\centering\includegraphics[height=100pt]{./img/rnnUnfold.png}
 		\caption{RNNの基本構造(展開)}
-		\label{fig:rnn_unfold}
+		\label{fig:rnnUnfold}
 	\endminipage\hfill
 }
 \end{center}
@@ -442,7 +405,7 @@ RNNは深層ニューラルネットワークの一種で，主に系列デー�
 入力層，隠れ層，出力層の3層から構成されている．
 系列方向を時刻とすれば，
 時刻$t$の隠れ層${\bf h}_t$の計算に時刻$t-1$の隠れ層の情報を入力する${\bf h}_t = f({\bf x}_t, {\bf h}_{t-1})$という式のように，一つ前の情報を繰り返し（recurrent）入力するという構造である．
-モデル構造は図\ref{fig:rnn_fold}のように表され，隠れ層の部分を時間方向に展開して図\ref{fig:rnn_unfold}のように表されることもある．
+モデル構造は図\ref{fig:rnnFold}のように表され，隠れ層の部分を時間方向に展開して図\ref{fig:rnnUnfold}のように表されることもある．
 関数$f$は，入力である${\bf x}_t$や${\bf h}_{t-1}$をアフィン変換\footnote{平行移動と線形変換を組み合わせた変換のこと．}して足しあわせた後，活性化関数にかけるというものがよく利用される．
 活性化関数はシグモイド関数やtanh（Hyperbolic Tangent関数），Relu\cite{nair2010rectified}，ELUs\cite{clevert2015fast}など多く提案されており，通常，非線形関数である．
 
