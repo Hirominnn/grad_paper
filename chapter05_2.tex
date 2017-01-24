@@ -32,8 +32,8 @@
 実際のモデルにおいては，正答ベクトルと誤答ベクトルを分けてユニットを作るため，
 それぞれ２倍のユニット数で表現されている．
 
+RNNの部分にはGRNNを用いる．
 ハイパーパラメータについては，
-%対象データが多いため学習コストの削減を狙いRNNの部分にはGRNNを用いる．
 学習率の初期値を$200$，
 モーメントを$0.98$，
 1エポックごとに，
@@ -85,19 +85,21 @@ Theanoは多次元行列を含む数学的表現の定義や計算，最適化�
 
 まず，
 各手法によって得られた写像行列を，以下の条件に基づいて離散化し，
-DKTにおいて最も高い精度を発揮したものをその手法による精度の上界として採用する．
+DKTにおいて最も高い精度を発揮したものをその手法による精度の上界として採用し，
+「ASSISTments 2009-2010」では$Y = 0.70$，「Bridge to Algebra 2006-2007」では$Y = 0.85$とした．
 \begin{enumerate}
-\item 各問題の写像ベクトルにおいて，値が上位$X$位以内のタグを１とする
+\item 各問題の写像ベクトルにおいて，最も値の高いタグを１とする
 \item 各問題の写像ベクトルにおいて，値が閾値$Y$以上のタグを１とする
 \item 各問題の写像ベクトルにおいて，1でない要素を0にする
 \end{enumerate}
 
+
+RNNの部分にはGRNNを用いる．
 ハイパーパラメータについては，
-%対象データが多いため学習コストの削減を狙いRNNの部分にはGRNNを用いる．
 学習率の初期値を$200$，
 モーメントを$0.98$，
 1エポックごとに，
-減衰率$0.99$として学習率を最小学習率$10$まで減衰させる．
+減衰率$0.95$として学習率を最小学習率$10$まで減衰させる．
 また，勾配のノルムの最大値を$0.00001$として\cite{pascanu2013difficulty}に従い勾配に制約を設けた．
 dropoutは\cite{piech2015deep}と同様に${\bf y}_t$の方向にのみかけ，
 dropout率は$0.5$とした．
@@ -153,8 +155,8 @@ dropout率は$0.5$とした．
 
 \subsection{各知識分類の知識獲得予測における予測性能}
 
-%\begin{table}[!htb]
-\begin{table}[t]
+\begin{table}[!htb]
+%\begin{table}[t]
 \caption{各知識分類の知識獲得予測における予測性能}
 \label{tab:result1}
 \begin{center}
@@ -181,7 +183,6 @@ Bridge to Algebra 2006-2007 &				0.81 (0.72) 			& 			0.79 				& 	& 0.81 			& {\b
 知識獲得予測の文脈を考慮し，提案手法の知識分類学習モデルによって作成された知識タグ（深層学習タグ）
 をそれぞれDeep Knowledge Tracingに適用した結果を表\ref{tab:result1}に示す．
 深層学習の「Embedding」と「Autoencoder」はそれぞれ誤差関数に再構成誤差を導入しない場合と導入した場合である．
-深層学習タグのスコア横の括弧は，最も良い精度を記録した離散化におけるハイパーパラメータである．
 marginalは各問題についてそれぞれ正解の周辺確率を予測結果とするものである．
 \cite{piech2015deep}にも記載されていたため，本稿でも同様にベースラインの参考として記載した．
 また，値が大きい箇所は太字で記載した．
@@ -193,25 +194,25 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 
 
 \subsection{抽出タグと既存タグの関係の概観}
-抽出タグと既存タグの共起関係を概観する．
-まず，抽出タグの紐づく問題を媒介として作成した抽出タグと既存タグの共起行列に対し，
-TF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと既存タグの関係性を表す行列(以下，タグ関係行列)を作成した，
-また，既存タグをノードとする知識間影響ネットワーク（以下，既存タグネットワーク）を，既存のDKTで用いられた手法に基づいて作成し，
-タグ関係行列を元に抽出タグのノードを追加したネットワーク図の概形を図\ref{fig:SimpleNetwork}，\ref{fig:Network}に示す．
+抽出タグと既存タグの関係を概観する．
+まず，既存タグをノードとする知識間影響ネットワーク（以下，既存タグネットワーク）を，既存のDKTで用いられた手法に基づいて作成しておく(図\ref{fig:SimpleNetwork})．
+次に，抽出タグの紐づく問題を媒介として作成した抽出タグと既存タグの共起行列に対し，
+TF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと既存タグの関係性を表す行列(以下，タグ関係行列)を作成し，
+この行列を元に抽出タグのノードを既存タグネットワークに追加することで，両タグの関係性を表す「タグ関係ネットワーク」を作成した(図\ref{fig:Network})．
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-%\hspace*{-40pt}
+\hspace*{-20pt}
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=200pt]{./img/aSimpleNetwork.png}
+		\includegraphics[height=220pt]{./img/aSimpleNetwork.png}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=200pt]{./img/kSimpleNetwork.png}
+		\includegraphics[height=220pt]{./img/kSimpleNetwork.png}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -220,18 +221,18 @@ TF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと�
 \label{fig:SimpleNetwork}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-%\hspace*{-40pt}
+\hspace*{-20pt}
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=200pt]{./img/aNetwork.png}
+		\includegraphics[height=220pt]{./img/aNetwork.png}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=200pt]{./img/kNetwork.png}
+		\includegraphics[height=220pt]{./img/kNetwork.png}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -240,41 +241,28 @@ TF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと�
 \label{fig:Network}
 \end{figure}
 
-ここで，既存タグネットワークは，
-各既存タグの回答ログにおける出現回数に比例してノードのサイズを設定し，
-平均回答順序が早いものほど青く，遅いものほど赤く色を設定し，
+ここで，図\ref{fig:SimpleNetwork}の既存タグネットワークでは，
+ノードのサイズは，各既存タグの回答ログにおける出現回数に比例して設定し，
+ノードの色は，回答ログにおける平均回答順序が早いものほど青く，遅いものほど赤く色を設定し，
 各既存タグへの影響度が大きい上位３つの既存タグからエッジを引いている．
-また，追加される抽出タグは緑色のノードで表現し，
+また，図\ref{fig:Network}において追加される抽出タグは緑色のノードで表現し，
 各抽出タグにとって関係性の強い上位３つの既存タグに対して緑色のエッジを引いている．
 
-ネットワークにおいて接続している抽出タグと既存タグの組み合わせから，抽出タグと既存タグの対応関係を図\ref{fig:aTable}，\ref{fig:kTable}にまとめた．括弧内の数字はTF-IDF値であり，この値が高いほど特徴的な既存タグであることを表す．
-
-\begin{figure}[p]
-\begin{center}
-\includegraphics[height=500pt]{./img/aTable.png}
-\end{center}
-\caption{「ASSISTments 2009-2010」の抽出タグと既存タグの対応関係}
-\label{fig:aTable}
-\end{figure}
-
-\begin{figure}[p]
-\begin{center}
-\includegraphics[height=500pt]{./img/kTable.png}
-\end{center}
-\caption{「Bridge to Algebra 2006-2007」の抽出タグと既存タグの対応関係}
-\label{fig:kTable}
-\end{figure}
-
-
-また，以上の処理の流れを図\ref{fig:networkflow}にまとめた．
+以上の処理の流れを図\ref{fig:networkflow}にまとめた．
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=200pt]{./img/networkflow.png}
+\includegraphics[width=400pt]{./img/networkflow.png}
 \end{center}
 \caption{ネットワーク作成の流れ}
 \label{fig:networkflow}
 \end{figure}
+
+
+なお，タグ関係ネットワークにおいて接続している抽出タグと既存タグの組み合わせは付録の図\ref{fig:aTable}，\ref{fig:kTable}にまとめた．
+括弧内の数字はTF-IDF値であり，この値が高いほど各抽出タグにとって特徴的な既存タグであることを表す．
+
+
 
 
 \subsection{抽出タグと既存タグの比較分析}
@@ -284,86 +272,101 @@ TF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと�
 
 
 まず，知識獲得予測の精度を向上させる要因を，データの構造から分析した．
-抽出タグと既存タグの各知識タグが回答ログに出現する頻度の分布の比較と，各分布の標準偏差を図\ref{fig:aAppearHist}，\ref{fig:kAppearHist}に表す．
+抽出タグと既存タグの各知識タグが回答ログに出現する頻度の分布の比較と，各分布の標準偏差を図\ref{fig:AppearHist}に表す．
 図より，既存タグはタグごとの出現回数の分散が大きい一方で，
 抽出タグは分散が小さく，特定の値の周辺に集中していることがわかる．
 この分布の違いと予測精度の関係性についても，次章で考察する．
 
+
 \begin{figure}[htb]
 \begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
 	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/aAppearHist.png}
-		\caption{各タグの出現回数の分布(ASSISTments 2009-2010)}
-		\label{fig:aAppearHist}
+		\centering
+		\includegraphics[width=180pt]{./img/aAppearHist.png}
+		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/aAppearHist.png}
-		\caption{各タグの出現回数の分布(Bridge to Algebra 2006-2007)}
-		\label{fig:kAppearHist}
+		\centering
+		\includegraphics[width=180pt]{./img/kAppearHist.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
 \end{center}
+\caption{各タグの出現回数の分布}
+\label{fig:AppearHist}
 \end{figure}
 
+
 次に，
-図\ref{fig:aNetwork}，\ref{fig:kNetwork}のネットワークの局所的な特性に着目し，抽出タグと既存タグの性質が観測できる部分を示す．
+図\ref{fig:Network}のネットワークの局所的な特性に着目し，抽出タグと既存タグの性質が観測できる部分を示す．
 まず，既存タグに注目し，各既存タグに抽出タグがどのように紐付いているかを観察すると，
-出現回数の多い既存タグ(大きいノード)は多くの抽出タグ(緑のノード)が紐付いている(図\ref{fig:aNetworkConcentrate}，\ref{fig:kNetworkConcentrate})一方，
-出現回数の少ない既存タグ(小さいノード)は特定の抽出タグのみ紐付き，多くは紐付いていない(図\ref{fig:aNetworkLittle}，\ref{fig:kNetworkLittle})ことがわかる．
+出現回数の多い既存タグ(大きいノード)は多くの抽出タグ(緑のノード)が紐付いている(図\ref{fig:NetworkConcentrate})一方，
+出現回数の少ない既存タグ(小さいノード)は特定の抽出タグのみ紐付き，多くは紐付いていない(図\ref{fig:NetworkLittle})ことがわかる．
+
+\begin{figure}[H]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkConcentrate.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkConcentrate.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{多くの抽出タグが紐づく既存タグ}
+\label{fig:NetworkConcentrate}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkLittle.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkLittle.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{少数の抽出タグのみ紐づく既存タグ}
+\label{fig:NetworkLittle}
+\end{figure}
+
 次に，抽出タグに注目し，各抽出タグがどのような既存タグに紐付いているかを観察すると，
-内容的な関係性の強い複数の既存タグに紐付いている抽出タグが存在する(図\ref{fig:aNetworkSimilar}，\ref{fig:kNetworkSimilar})ことがわかる．	
+内容的な関係性の強い複数の既存タグに紐付いている抽出タグが存在する(図\ref{fig:NetworkSimilar})ことがわかる．	
 このような既存タグと抽出タグの関係性から，どのような性質のタグが抽出されているといえるかは，次章で考察する．
 
 \begin{figure}[htb]
 \begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
 	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/aNetworkConcentrate.png}
-		\caption{多くの抽出タグが紐づく既存タグ(ASSISTments 2009-2010)}
-		\label{fig:aNetworkConcentrate}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkSimilar.png}
+		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/kNetworkConcentrate.png}
-		\caption{多くの抽出タグが紐づく既存タグ(Bridge to Algebra 2006-2007)}
-		\label{fig:kNetworkConcentrate}
-	\endminipage\hfill
-}
-\end{center}
-\end{figure}
-
-\begin{figure}[htb]
-\begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/aNetworkLittle.png}
-		\caption{少数の抽出タグのみ紐づく既存タグ(ASSISTments 2009-2010)}
-		\label{fig:aNetworkLittle}
-	\endminipage\hfill
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/kNetworkLittle.png}
-		\caption{少数の抽出タグのみ紐づく既存タグ(Bridge to Algebra 2006-2007)}
-		\label{fig:kNetworkLittle}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkSimilar.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
 \end{center}
-\end{figure}
-
-\begin{figure}[htb]
-\begin{center}
-\hspace*{-40pt}\makebox[1.2\textwidth][c]{
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/aNetworkSimilar.png}
-		\caption{内容的関係性の強い既存タグに紐づく抽出タグ(ASSISTments 2009-2010)}
-		\label{fig:aNetworkSimilar}
-	\endminipage\hfill
-	\minipage{0.53\textwidth}
-		\includegraphics[height=100pt]{./img/kNetworkSimilar.png}
-		\caption{内容的関係性の強い既存タグに紐づく抽出タグ(Bridge to Algebra 2006-2007)}
-		\label{fig:kNetworkSimilar}
-	\endminipage\hfill
-}
-\end{center}
+\caption{内容的関係性の強い既存タグに紐づく抽出タグ}
+\label{fig:NetworkSimilar}
 \end{figure}
 
 
