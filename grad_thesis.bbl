@@ -111,6 +111,12 @@ Dong, D., Wu, H., He, W., Yu, D., and Wang, H. (2015).
   Computational Linguistics and the 7th International Joint Conference on
   Natural Language Processing}. ACL.
 
+\bibitem[Dozat, 2015]{dozat2015incorporating}
+Dozat, T. (2015).
+\newblock Incorporating nesterov momentum into adam.
+\newblock Technical report, Stanford University, Tech. Rep., 2015.[Online].
+  Available: http://cs229. stanford. edu/proj2015/054 report. pdf.
+
 \bibitem[Erhan et~al., 2010]{erhan2010does}
 Erhan, D., Bengio, Y., Courville, A., Manzagol, P.-A., Vincent, P., and Bengio,
   S. (2010).
@@ -230,6 +236,11 @@ Le, Q.~V., Jaitly, N., and Hinton, G.~E. (2015).
   units.
 \newblock {\em arXiv preprint arXiv:1504.00941}.
 
+\bibitem[LeCun et~al., 1998]{lecun1998gradient}
+LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998).
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE}, 86(11):2278--2324.
+
 \bibitem[Lipton et~al., 2015]{lipton2015learning}
 Lipton, Z.~C., Kale, D.~C., Elkan, C., and Wetzell, R. (2015).
 \newblock Learning to diagnose with lstm recurrent neural networks.
@@ -272,6 +283,10 @@ Midgley, C. (2014).
 Mikolov, T. (2012).
 \newblock Statistical language models based on neural networks.
 \newblock {\em Presentation at Google, Mountain View, 2nd April}.
+
+\bibitem[Minsky and Papert, 1969]{minsky1969perceptron}
+Minsky, M. and Papert, S. (1969).
+\newblock Perceptron (expanded edition).
 
 \bibitem[Nair and Hinton, 2010]{nair2010rectified}
 Nair, V. and Hinton, G.~E. (2010).

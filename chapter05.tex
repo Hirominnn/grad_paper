@@ -14,26 +14,29 @@
 
 \section{実験設定}
 
-本研究の実験は，大きく以下の３つのブロックに分けられる．
+本研究の実験は，大きく以下の3つに分けられる．
 \begin{enumerate}
-	\item 知識分類学習モデルによる知識分類の学習
-	\item 学習された知識分類の知識獲得予測性能に関する検証
-	\item 学習された知識分類の性質に関する比較分析
+	\item 知識分類の学習と抽出
+	\item 知識分類の予測性能の検証
+	\item 知識分類の性質の比較
 \end{enumerate}
 以下では，順に，実験設定について述べる．
 
 
-\subsection{知識分類学習モデルによる知識分類の学習}
+\subsection{知識分類の学習と抽出}
 \label{sec:section}
-生徒の問題回答ログに対し，図\ref{fig:model}に表される知識分類学習モデルを適用し，回答正誤の予測性において最適な知識分類を抽出する．
-知識タグ空間の次元数は，既存の知識タグの次元数と統一し，
-「ASSISTments 2009-2010」では56，
-「Bridge to Algebra 2006-2007」では193とした．
-実際のモデルのユニットにおいては，正答ベクトルと誤答ベクトルを分けてユニットを作るため，
-それぞれ２倍のユニット数で表現されている．
+生徒の問題回答ログに対し，図\ref{fig:model}に表される知識分類学習モデルを適用し，
+問題空間を知識空間に最適に変換する写像関数を学習し，
+離散化してタグとして抽出する．
 
-ハイパーパラメタについては，
-%対象データが多いため学習コストの削減を狙いRNNの部分にはGRNNを用いる．
+知識タグ空間の次元数は，既存の知識タグの次元数と統一し，
+「ASSISTments 2009-2010」では55，
+「Bridge to Algebra 2006-2007」では115とした．
+実際のモデルにおいては，正答ベクトルと誤答ベクトルを分けてユニットを作るため，
+それぞれ2倍のユニット数で表現されている．
+
+RNNの部分にはGRNNを用いる．
+ハイパーパラメータについては，
 学習率の初期値を$200$，
 モーメントを$0.98$，
 1エポックごとに，
@@ -45,58 +48,59 @@ dropout率は$0.5$とした．
 各重み行列の初期化は\cite{glorot2010understanding}にしたがった．
 時系列方向の誤差逆伝搬は最長で$200$まで伝搬するように制約を設けた．
 
-これらのハイパーパラメタは実験的に高い予測性能を発揮したため設定しており，
+これらのハイパーパラメータは実験的に高い予測性能を発揮したため設定しており，
 網羅的に探索したわけではない．
-通常，深層学習の手法はハイパーパラメタの数が非常に大きく，また，
+通常，深層学習の手法はハイパーパラメータの数が非常に大きく，また，
 計算コストが大きいため大規模な探索は行えない．
 Grid SearchやRandom Search\cite{bergstra2012random}といった探索手法が提案されているが，
 専門家が手で調整した方が優れていることが報告されている\cite{larochelle2007empirical, bergstra2012random}．
 
 最適化手法は，
-\ref{eq:prediction_entropy}で表される問題回答予測に関する誤差関数$L_p$と，
-\ref{eq:reconstruction_error}で問題空間と知識タグ空間のReconstruction Errorを表す誤差関数を$L_r$の和である
-$L$\ref{eq:total_loss}を目的関数として最小化するものである．
-
+式\ref{eq:prediction_entropy}で表される問題回答予測に関する誤差関数$L_p$と，
+式\ref{eq:autoencoder_loss}で表される問題空間と知識タグ空間の最高性誤差を表す誤差関数$L_r$の和である
+$L$(式\ref{eq:total_loss})を目的関数として最小化するものである．
 学習時は\cite{piech2015deep}と同様にミニバッチごとに確率的勾配降下法で目的関数を最小化する．
 評価指標はAUCスコアを採用する．
 
-２つのデータセットいずれにおいても，
-訓練：検証：テスト = 8：1：1となるようにユーザを分け，
-訓練ユーザのデータでモデルを構築し，
-検証ユーザのデータでハイパーパラメタを調整し， 
-検証ユーザのデータで精度が最も高かったモデルを
-テストユーザのデータに適用し当該モデルの最終的な精度とした．
+一般的な機械学習では，モデルの汎化性能を高めるために訓練データと検証データを分けるが，
+2つのデータセットいずれにおいても，全ユーザの問題回答ログを訓練データとして，モデルを学習させた．
+%これは，分類を作成する時点において既知のデータから帰納的に最適な知識分類を作成するという本研究のテーマと，
+%未知のデータが追加される都度モデルを学習させ，知識分類を更新することが容易であるオンライン教育サービスのプラットフォームの環境を考慮し，
+%最適な問題設定としたものである．
+この設計と知識分類の汎用性に関しては第６章で詳述する．
+
+得られた写像関数を以下の条件に基づいて離散化し，タグとして抽出する．
+%DKTにおいて最も高い精度を発揮したものをその手法による精度の上界として採用し，
+「ASSISTments 2009-2010」では$Y = 0.70$，「Bridge to Algebra 2006-2007」では$Y = 0.85$とした．
+\begin{enumerate}
+\item 各問題の写像ベクトルにおいて，最も値が大きいタグを１とする．
+\item 写像行列全体において，値が閾値$Y$以上のタグを１とする．
+\item 写像行列全体において，1でない要素を0にする．
+\end{enumerate}
 
 実装には
-Theanoを用いた\cite{bergstra+al:2010-scipy,Bastien-Theano-2012}．
+Theano\cite{bergstra+al:2010-scipy,Bastien-Theano-2012}を用いた．
 Theanoは多次元行列を含む数学的表現の定義や計算，最適化を効率的に行えるPythonのライブラリで，
 深層学習の研究ではよく利用される．
 
 
-\subsection{学習された知識分類の知識獲得予測性能に関する検証}
+\subsection{知識分類の予測性能の検証}
 
-\ref{sec:section}で得られた問題空間から知識タグ空間への写像行列を離散化し，
-抽出された知識分類を用いて一般的なDKTを行い，
-既存の知識分類を用いた場合の精度の比較を行う．
+\ref{sec:section}で抽出した知識分類をDeep Knowledge Tracing(DKT)に用いて知識獲得予測を行い，
+既存の知識分類を用いた場合との精度の比較を行う．
 また，本手法で抽出される知識分類と既存の知識分類の差分を明確にするため，
 以下の方法で作成された知識分類を用いた場合とも比較を行う．
 \begin{itemize}
-\item DKTを用いず，一般的な次元圧縮手法であるPCAやAuto Encoderによって作成された知識分類
-\item DKTを用いるが，Reconstruction Errorを誤差関数に入れない，一般的な埋め込みによって作成された知識分類
+\item 回答正誤予測の文脈を考慮せず，一般的な事前学習のAutoencoderによって作成された知識分類 \label{c1}
+\item 回答正誤予測の文脈を考慮するが，再構成誤差を目的関数に導入しない，一般的な埋め込み(Embedding)によって作成された知識分類 \label{c2}
 \end{itemize}
 
-
-まず，写像行列の離散化は，いずれのデータセットにおいても，
-各問題に対して最も関係性の強い知識タグのみを１とし，他を０にする方法が，
-最も高い精度で知識獲得を予測できることを確認したため，
-この手法を用いる．
-
-ハイパーパラメタについては，
-%対象データが多いため学習コストの削減を狙いRNNの部分にはGRNNを用いる．
+RNNの部分にはGRNNを用いる．
+ハイパーパラメータについては，
 学習率の初期値を$200$，
 モーメントを$0.98$，
 1エポックごとに，
-減衰率$0.99$として学習率を最小学習率$10$まで減衰させる．
+減衰率$0.95$として学習率を最小学習率$10$まで減衰させる．
 また，勾配のノルムの最大値を$0.00001$として\cite{pascanu2013difficulty}に従い勾配に制約を設けた．
 dropoutは\cite{piech2015deep}と同様に${\bf y}_t$の方向にのみかけ，
 dropout率は$0.5$とした．
@@ -106,30 +110,38 @@ dropout率は$0.5$とした．
 
 最適化手法は，
 一般的なDKTと同じく，
-\ref{eq:prediction_entropy}で表される問題回答予測に関する誤差関数$L_p$
+式\ref{eq:prediction_entropy}で表される回答正誤予測に関する誤差関数$L_p$
 を目的関数として最小化するものである．
-
 学習時は\cite{piech2015deep}と同様にミニバッチごとに確率的勾配降下法で目的関数を最小化する．
 評価指標はAUCスコアを採用する．
 
-\ref{sec:section}と同様に，
-２つのデータセットいずれにおいても，
+2つのデータセットいずれにおいても，
 訓練：検証：テスト = 8：1：1となるようにユーザを分け，
+訓練ユーザのデータでモデルを構築し，
+検証ユーザのデータでハイパーパラメータを調整し， 
+検証ユーザのデータで精度が最も高かったモデルを
+テストユーザのデータに適用し当該モデルの最終的な精度とした．
+
 実装にはTheanoを用いた．
 
 
-\subsection{学習された知識分類の性質に関する比較分析}
+\subsection{知識分類の性質の比較}
 
-\ref{sec:section}で抽出された知識分類を既存の知識分類を比較分析することで，
-その性質を検証する．
+\ref{sec:section}で抽出された知識分類を既存の知識分類と比較分析することで，その性質を検証する．
 
-まず，各知識タグが回答ログに出現する頻度の分布や，紐づく問題数の分布に着目し，
-知識獲得予測の精度を向上させる要因を，データの構造から分析する．
-また，抽出された知識タグと既存の知識タグを，同じネットワークに配置して可視化することで，
-既存の知識タグがどのように再配置され，どのようなネットワーク構造となったのかを分析する．
+まず，既存の知識タグ(以下，既存タグ)と抽出された知識タグ(以下，抽出タグ)それぞれにおいて，各タグが回答ログに出現する回数の分布に着目し，
+知識獲得予測の精度を向上させる要因を，データ構造の側面から定量的に分析する．
 
-
-
+次に，抽出タグと既存タグの関係性を可視化し，その構造や内容について比較を行う．
+まず，既存タグをノードとする知識間影響ネットワーク（以下，既存タグネットワーク）を，既存のDKTで用いられた手法に基づいて作成し．
+次に，抽出タグと既存タグの共起行列に対してTF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと既存タグの関係性を表す行列(以下，タグ関係行列)を作成し，
+この行列を元に抽出タグのノードを既存タグネットワークに追加することで，両タグの関係性を表す「タグ関係ネットワーク」を作成する．
+ここで，既存タグネットワークでは，
+ノードのサイズは，各既存タグの回答ログにおける出現回数に比例して設定し，
+ノードの色は，回答ログにおける平均回答順序が早いものほど青く，遅いものほど赤く色を設定し，
+各既存タグへの影響度が大きい上位3つの既存タグからエッジを引く．
+また，タグ関係ネットワークにおいて追加される抽出タグは緑色のノードで表現し，
+各抽出タグにとって関係性の強い上位3つの既存タグに対して緑色のエッジを引く．
 
 以上，実験設定について述べた．
 
@@ -138,79 +150,206 @@ dropout率は$0.5$とした．
 \section{実験結果}
 実験結果について述べる．
 まず，各手法によって作成された知識分類についての知識獲得予測における予測性能を比較し，
-いずれのデータセットいずれにおいても，
-提案手法によって学習された知識分類から作成された知識タグを利用することで，
-最も良い精度で予測が可能になっていることを定量的に確認する．
+いずれのデータセットにおいても，
+提案手法によって学習された知識分類が最も良い精度を記録したことを定量的に確認する．
 
-さらに，学習された知識分類を，既存の知識分類と比較することにより，
-その性質を定性的に分析する．
+さらに，学習された知識分類を，既存の知識分類と比較することにより，その性質を定量的・定性的に分析する．
 
 
 
-\subsection{各知識分類の知識獲得予測における予測性能}
+\subsection{知識分類の予測性能の比較}
 
-%\begin{table}[!htb]
-\begin{table}[t]
-\caption{各知識分類の知識獲得予測における予測性能}
+\begin{table}[!htb]
+%\begin{table}[t]
+\caption{各知識タグの知識獲得予測における予測性能}
 \label{tab:result1}
 \begin{center}
+\scalebox{0.9}{
 \centerline{
 {
-\begin{tabular}{c|rrrrrr}\hline
-\multirow{3}{*}{データセット}	&	\multicolumn{6}{c}{AUC}\\\cline{2-7}
- 							&	\multirow{2}{*}{既存タグ(marginal)} 	& \multicolumn{2}{c}{事前圧縮タグ} 	&	& \multicolumn{2}{c}{深層学習タグ}\\\cline{3-4}\cline{6-7}
-							&										& PCA 	& 	AutoEncoder	& 				& Embedding 	& AutoEncoder \\\hline 			 
-%ASSISTments 2009-2010 50 	&				0.81 (0.66) 			& 0.00 	& 	0.00 	& 					& 0.00 			& {\bf 0.86}\\
-ASSISTments 2009-2010 	 	&				0.76 (0.61)				& 0.?? 	& 	0.?? 	& 					& 0.?? 			& {\bf 0.78}\\
-Bridge to Algebra 2006-2007 &				0.80 (0.70) 			& 0.?? 	& 	0.?? 	& 					& 0.?? 			& {\bf 0.85}\\
+\begin{tabular}{c|ccccc}\hline
+\multirow{3}{*}{データセット}	&	\multicolumn{5}{c}{AUC}\\\cline{2-6}
+ 							&	\multirow{2}{*}{既存タグ(marginal)} 	& \multirow{2}{*}{事前学習タグ} 	&	& \multicolumn{2}{c}{深層学習タグ}\\\cline{5-6}
+							&										& 								&	& Embedding 	& AutoEncoder \\\hline 			 
+ASSISTments 2009-2010  		&				0.72 (0.61) 			& 			0.67 				& 	& 0.69 			& {\bf 0.74} \\
+Bridge to Algebra 2006-2007 &				0.81 (0.72) 			& 			0.79 				& 	& 0.81 			& {\bf 0.82} \\
 \hline
 \end{tabular}
+}
 }
 }
 \end{center}
 \end{table}
 
 
-
 ベースラインとなる既存の知識タグ(既存タグ)と，
-知識分類学習モデルから作成された知識タグ(深層学習タグ)，
-さらに，差分検証のための，深層学習モデルを用いずに通常の次元削減によって作成された知識タグ(事前圧縮タグ)
-を，各データセットから作成し，Deep Knowledge Tracingに適用した結果を表\ref{tab:result1}に示す．
+回答正誤予測の文脈を考慮しない，一般的な事前学習のAutoencoderによって作成された知識タグ（事前学習タグ），
+回答正誤予測の文脈を考慮し，提案手法の知識分類学習モデルによって作成された知識タグ（深層学習タグ）
+をそれぞれDeep Knowledge Tracingに適用した結果を表\ref{tab:result1}に示す．
+深層学習タグの「Embedding」と「Autoencoder」はそれぞれ誤差関数に再構成誤差を導入しない場合と導入した場合である．
 marginalは各問題についてそれぞれ正解の周辺確率を予測結果とするものである．
-\cite{piech2015deep}にも記載されていたため，本稿でも同様にベースラインとして記載した．
-また，
-値が大きい箇所は太字で記載した．
-
+\cite{piech2015deep}にも記載されていたため，本稿でも同様にベースラインの参考として記載した．
+また，値が大きい箇所は太字で記載した．
 
 いずれのデータセットにおいても，
-提案手法である「深層学習タグ(AutoEncoder)」が，最も高いAUCを記録した．
+提案手法である「深層学習タグ(Autoencoder)」が，最も高いAUCを記録した．
+この結果より，提案手法によって作成された知識分類が，既存の知識分類よりも知識獲得の予測性において優れていることが示された．
+以下，このタグを「抽出タグ」とする．
 
 
-\subsection{学習された知識分類の可視化と概観}
-最も良い予測性能を発揮した「深層学習タグ(AutoEncoder)」を可視化し，その概要を明らかにする．
-(ネットワークや対応関係と絡めて執筆予定)
-一覧　
-タグ中心のネットワークとスキル中心のネットワーク比較　
-２つをまとめて比較　
+\subsection{抽出タグと既存タグの関係の概観}
+抽出タグと既存タグの関係を概観する．
+既存タグの知識間影響ネットワークである既存タグネットワークを図\ref{fig:SimpleNetwork}に，
+抽出タグと既存タグの関係性を表すタグ関係ネットワークを図\ref{fig:Network}に表す．
+なお，タグ関係ネットワークにおいて接続している抽出タグと既存タグの組み合わせは付録にまとめた．
 
-\subsection{学習された知識分類の比較分析}
-抽出された知識タグを既存の知識タグと比較することにより，
-抽出された知識タグの性質を定性的に確認する．
 
-まず，各知識タグが回答ログに出現する頻度の分布や，紐づく問題数の分布に着目し，
-知識獲得予測の精度を向上させる要因を，データの構造から分析した．（図xx）
-図より，既存タグは各指標について分散が大きい一方で，
-抽出タグは各指標について分散が小さく，特定の値の周辺に集中している．
-この分布の違いと予測精度の関係性についても，次章で考察する．
+\begin{figure}[H]
+\begin{center}
+\hspace*{-20pt}
+\makebox[1.1\textwidth][c]{
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/aSimpleNetwork.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/kSimpleNetwork.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{既存タグネットワークの構造}
+\label{fig:SimpleNetwork}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\hspace*{-20pt}
+\makebox[1.1\textwidth][c]{
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/aNetwork.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/kNetwork.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{タグ関係ネットワークの構造}
+\label{fig:Network}
+\end{figure}
+
+
+
+
+\subsection{抽出タグと既存タグの比較分析}
+抽出タグを既存タグと比較することにより，
+抽出タグの性質を定量的・定性的に分析する．
+
+
+
+まず，知識獲得予測の精度を向上させる要因を，データの構造から分析した．
+抽出タグと既存タグそれぞれにおいて，各タグが回答ログに出現する回数の分布の比較と，各分布の標準偏差$\sigma$を図\ref{fig:AppearHist}に表す．
+図より，既存タグはタグごとの出現回数の分散が大きい一方で，
+抽出タグは分散が小さく，特定の値の周辺に集中していることがわかる．
+この分布の違いと予測精度の関係性については，第6章で考察する．
+
+
+\begin{figure}[htb]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[width=180pt]{./img/aAppearHist.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[width=180pt]{./img/kAppearHist.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{各タグの出現回数の分布}
+\label{fig:AppearHist}
+\end{figure}
+
 
 次に，
-既存のDKTの手法に基づき作成された既存タグの知識間ネットワークに対し，
-既存タグと抽出タグの共起行列からTD-IDF値を求めて作成した行列を元にノードとエッジを追加したネットワーク図を図xxに示す．
-図より，
-表より，複数の抽出タグにおいて特徴的と判断されている既存タグが存在する一方，
-特定の抽出タグ内にまとめられ，他のタグでは特徴的でないと判断されている既存タグも存在する．
-この特徴付けにより，どのような性質のタグが抽出されているかについては，次章で考察する．
+図\ref{fig:Network}のネットワークの局所的な特性に着目し，抽出タグと既存タグの構造や内容の関係性が観測できる部分を示す．
+まず，既存タグに注目し，各既存タグに抽出タグがどのように紐付いているかを観察すると，
+出現回数の多い既存タグ(大きいノード)は多くの抽出タグ(緑のノード)が紐付いている(図\ref{fig:NetworkConcentrate})一方，
+出現回数の少ない既存タグ(小さいノード)は特定の抽出タグのみ紐付き，多くは紐付いていない(図\ref{fig:NetworkLittle})ことがわかる．
 
+\begin{figure}[H]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkConcentrate.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkConcentrate.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{多くの抽出タグが紐づく既存タグ}
+\label{fig:NetworkConcentrate}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkLittle.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkLittle.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{少数の抽出タグのみ紐づく既存タグ}
+\label{fig:NetworkLittle}
+\end{figure}
+
+次に，抽出タグに注目し，各抽出タグがどのような既存タグに紐付いているかを観察すると，
+内容的な関係性の強い複数の既存タグに紐付いている抽出タグが存在する(図\ref{fig:NetworkSimilar})ことがわかる．	
+このような既存タグと抽出タグの関係性から，どのような性質のタグが抽出されているといえるかは，第6章で考察する．
+
+\begin{figure}[htb]
+\begin{center}
+%\hspace*{-40pt}\makebox[1.2\textwidth][c]{
+\hspace*{-20pt}\makebox[1.1\textwidth][c]{
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/aNetworkSimilar.png}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.53\textwidth}
+		\centering
+		\includegraphics[height=120pt]{./img/kNetworkSimilar.png}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{内容的関係性の強い既存タグに紐づく抽出タグ}
+\label{fig:NetworkSimilar}
+\end{figure}
 
 
 \vvspace
