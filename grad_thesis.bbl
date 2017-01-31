@@ -18,6 +18,12 @@ Bahdanau, D., Chorowski, J., Serdyuk, D., Brakel, P., and Bengio, Y. (2015).
 \newblock End-to-end attention-based large vocabulary speech recognition.
 \newblock {\em arXiv preprint arXiv:1508.04395}.
 
+\bibitem[Baldi and Hornik, 1989]{baldi1989neural}
+Baldi, P. and Hornik, K. (1989).
+\newblock Neural networks and principal component analysis: Learning from
+  examples without local minima.
+\newblock {\em Neural networks}, 2(1):53--58.
+
 \bibitem[Bastien et~al., 2012]{Bastien-Theano-2012}
 Bastien, F., Lamblin, P., Pascanu, R., Bergstra, J., Goodfellow, I.~J.,
   Bergeron, A., Bouchard, N., and Bengio, Y. (2012).
@@ -518,9 +524,19 @@ Zeiler, M.~D. (2012).
 \newblock 学習環境のデザイン実験 学習科学と認知科学.
 \newblock {\em 認知科学}, 9(3):328--337.
 
+\bibitem[那須野薫, 2016]{nasuno2016深層学習}
+那須野薫 (2016).
+\newblock 深層学習を用いたmoocsの学習者の知識構造の分析.
+\newblock Master's thesis, 東京大学大学院工学系研究科技術経営戦略学専攻.
+
 \bibitem[白水始 et~al., 2014]{白水始2014学習科学の新展開}
 白水始, 三宅なほみ, and 益川弘如 (2014).
 \newblock 学習科学の新展開.
 \newblock {\em 認知科学}, 21(2):254--267.
+
+\bibitem[文部科学省, 2011]{gakushushidouyouryou}
+文部科学省 (2011).
+\newblock 現行学習指導要領・生きる力：学習指導要領とは何か？
+\newblock \url{http://www.mext.go.jp/a_menu/shotou/new-cs/idea/1304372.htm}.
 
 \end{thebibliography}

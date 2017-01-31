@@ -3,53 +3,49 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: grad_thesis.aux
 The style file: apalike.bst
 Database file #1: biblio.bib
-Repeated entry---line 1619 of file biblio.bib
- : @article{srivastava2014dropout
- :                               ,
-I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in liyanagunawardena2013impact
 Warning--empty journal in mcauley2010mooc
 Warning--empty booktitle in zaremba2015empirical
-You've used 92 entries,
+You've used 95 entries,
             1935 wiz_defined-function locations,
-            955 strings with 21023 characters,
-and the built_in function-call counts, 38316 in all, are:
-= -- 3713
-> -- 1827
-< -- 55
-+ -- 655
-- -- 628
-* -- 3193
-:= -- 6679
-add.period$ -- 281
-call.type$ -- 92
-change.case$ -- 767
-chr.to.int$ -- 91
-cite$ -- 95
-duplicate$ -- 1461
-empty$ -- 2491
-format.name$ -- 756
-if$ -- 7472
+            969 strings with 21446 characters,
+and the built_in function-call counts, 39207 in all, are:
+= -- 3806
+> -- 1854
+< -- 58
++ -- 663
+- -- 636
+* -- 3259
+:= -- 6847
+add.period$ -- 290
+call.type$ -- 95
+change.case$ -- 786
+chr.to.int$ -- 94
+cite$ -- 98
+duplicate$ -- 1496
+empty$ -- 2551
+format.name$ -- 769
+if$ -- 7640
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 89
-newline$ -- 458
-num.names$ -- 276
-pop$ -- 743
+missing$ -- 90
+newline$ -- 473
+num.names$ -- 285
+pop$ -- 754
 preamble$ -- 1
-purify$ -- 770
+purify$ -- 789
 quote$ -- 0
-skip$ -- 1133
+skip$ -- 1163
 stack$ -- 0
-substring$ -- 2338
-swap$ -- 241
+substring$ -- 2393
+swap$ -- 242
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 544
+type$ -- 562
 warning$ -- 3
-while$ -- 288
+while$ -- 296
 width$ -- 0
-write$ -- 1156
+write$ -- 1194
 is.kanji.str$ -- 0
-(There was 1 error message)
+(There were 3 warnings)

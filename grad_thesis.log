@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  26 JAN 2017 00:36
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  31 JAN 2017 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,20 +410,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 \c@subfigure=\count141
 \c@subtable=\count142
 )
-(./grad_thesis.aux
-
-LaTeX Warning: Label `tab:result1' multiply defined.
-
-
-LaTeX Warning: Label `tab:result1@cref' multiply defined.
-
-
-LaTeX Warning: Label `tab:result1' multiply defined.
-
-
-LaTeX Warning: Label `tab:result1@cref' multiply defined.
-
-)
+(./grad_thesis.aux)
 \openout1 = `grad_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -448,7 +435,8 @@ Package chapterbib Info: The sectionbib option changes "\chapter *" to "\sectio
 n *" in \thebibliography on input line 34.
 \AtBeginShipoutBox=\box51
 Package hyperref Info: Link coloring OFF on input line 34.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -473,7 +461,7 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 69.
- (./abstract_2.tex [2
+ (./abstract.tex [2
 
 
 ]) [3]
@@ -523,7 +511,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 [1
 
 ]
-Overfull \hbox (0.81808pt too wide) in paragraph at lines 52--62
+Overfull \hbox (0.81808pt too wide) in paragraph at lines 55--65
 []\JY1/mc/m/n/10.95 オンライン教育サ ービスの一つである \OT1/cmr/m/n/10.95 Mas-
 sive Open On-line Courses(MOOCs) [[]McAuley
  []
@@ -534,83 +522,81 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3]
-File: ./img/problem3.png Graphic file (type bmp)
- <./img/problem3.png> [4] [5]) (./chapter02.tex [6]
-第 2 章
-[7
-
-] [8] [9]
-File: ./img/coursera.png Graphic file (type bmp)
- <./img/coursera.png>
-File: ./img/jmooc.png Graphic file (type bmp)
- <./img/jmooc.png>
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 133--151
- |  [] 
- []
-
-File: ./img/knewton.png Graphic file (type bmp)
-<./img/knewton.png> [10] [11] [12]
-File: ./img/neuron.png Graphic file (type bmp)
- <./img/neuron.png> [13]
-File: ./img/neuralnetwork.png Graphic file (type bmp)
-
-<./img/neuralnetwork.png>
-File: ./img/deeplearning.png Graphic file (type bmp)
- <./img/deeplearning.png>
-Overfull \hbox (1.80255pt too wide) in paragraph at lines 303--315
- | [] 
- []
-
-[14]
-
-LaTeX Warning: Citation `dozat2015incorporating' on page 15 undefined on input 
-line 371.
-
-[15] [16]
-File: ./img/rnnFold.png Graphic file (type bmp)
- <./img/rnnFold.png>
-File: ./img/rnnUnfold.png Graphic file (type bmp)
- <./img/rnnUnfold.png>
-Overfull \hbox (1.80255pt too wide) in paragraph at lines 451--463
- | [] 
- []
-
-[17] [18] [19] [20]
-
-LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 615.
+[2] [3] [4]
+File: ./img/business.pdf Graphic file (type pdf)
+ <./img/business.pdf> [5]
+File: ./img/problem3.pdf Graphic file (type pdf)
+ <./img/problem3.pdf>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 212.
 
 
-LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 615.
-
-[21]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 662.
-
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 662.
- [22]
-[23] [24] [25] [26] [27] [28] [29] [30]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
+ [6] [7])
+(./chapter02.tex [8]
+第 2 章
+[9
+
+] [10] [11]
+File: ./img/coursera.pdf Graphic file (type pdf)
+ <./img/coursera.pdf>
+File: ./img/jmooc.pdf Graphic file (type pdf)
+ <./img/jmooc.pdf>
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 128--146
+ |  [] 
+ []
+
+File: ./img/knewton.pdf Graphic file (type pdf)
+<./img/knewton.pdf> [12] [13] [14]
+File: ./img/neuron.pdf Graphic file (type pdf)
+ <./img/neuron.pdf>
+File: ./img/neuralnetwork.pdf Graphic file (type pdf)
+
+<./img/neuralnetwork.pdf>
+File: ./img/deeplearning.pdf Graphic file (type pdf)
+ <./img/deeplearning.pdf>
+Overfull \hbox (1.80255pt too wide) in paragraph at lines 296--308
+ | [] 
+ []
+
+[15] [16] [17] [18]
+File: ./img/rnnFold.pdf Graphic file (type pdf)
+ <./img/rnnFold.pdf>
+File: ./img/rnnUnfold.pdf Graphic file (type pdf)
+ <./img/rnnUnfold.pdf>
+Overfull \hbox (1.80255pt too wide) in paragraph at lines 443--455
+ | [] 
+ []
+
+[19] [20] [21]
+
+LaTeX Font Warning: Font shape `JT1/mc/m/it' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 600.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/m/it' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 600.
+
+[22] [23] [24] [25] [26] [27] [28] [29] [30]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1020.
+(amsmath)                 on input line 962.
 
 [31] [32]) (./chapter03.tex [33]
 第 3 章
-File: ./img/workflow3.png Graphic file (type bmp)
-<./img/workflow3.png> [34
+File: ./img/workflow4.pdf Graphic file (type pdf)
+<./img/workflow4.pdf> [34
 
 ] [35] [36]
-File: ./img/model.png Graphic file (type bmp)
- <./img/model.png> [37] [38] [39] [40]
+File: ./img/model.pdf Graphic file (type pdf)
+ <./img/model.pdf> [37] [38] [39] [40]
 [41] [42]
-File: ./img/networkflow.png Graphic file (type bmp)
- <./img/networkflow.png>) (./chapter04.tex [43]
+File: ./img/networkflow.pdf Graphic file (type pdf)
+ <./img/networkflow.pdf> [43]) (./chapter04.tex [44]
 第 4 章
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
@@ -618,31 +604,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--41
 ata / home / assistment-[]2009-[]2010-[]data /
  []
 
-[44
+[45
 
-] [45]
-File: ./img/assistmentsProblemDist.png Graphic file (type bmp)
- <./img/assistmentsProblemDist.png>
-File: ./img/kddProblemDist.png Graphic file (type bmp)
- <./img/kddProblemDist.png>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 102--116
+] [46]
+File: ./img/aTable3.pdf Graphic file (type pdf)
+ <./img/aTable3.pdf>
+File: ./img/assistmentsProblemDist.pdf Graphic file (type pdf)
+ <./img/assistmentsProblemDist.pdf>
+File: ./img/kddProblemDist.pdf Graphic file (type pdf)
+
+<./img/kddProblemDist.pdf>
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 112--126
  | [] 
  []
 
-[46] [47] [48]) (./chapter05.tex [49]
-第 5 章
-[50
+[47] [48] [49]
+File: ./img/kTable3.pdf Graphic file (type pdf)
+ <./img/kTable3.pdf>
+Overfull \hbox (36.09451pt too wide) in paragraph at lines 195--196
+ [] 
+ []
 
-] [51] [52] [53]
+[50] [51]) (./chapter05.tex [52]
+第 5 章
+[53
+
+] [54] [55] [56]
+File: ./img/aHeatmap.pdf Graphic file (type pdf)
+ <./img/aHeatmap.pdf>
+Overfull \hbox (58.81679pt too wide) in paragraph at lines 249--249
+ [][] 
+ []
+
+File: ./img/kHeatmap.pdf Graphic file (type pdf)
+<./img/kHeatmap.pdf>
+Overfull \hbox (58.81679pt too wide) in paragraph at lines 249--249
+ [][] 
+ []
+
+
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 237--250
+ |  [] 
+ []
+
+[57]
 File: ./img/aSimpleNetwork.png Graphic file (type bmp)
  <./img/aSimpleNetwork.png>
-Overfull \hbox (9.8978pt too wide) in paragraph at lines 221--221
+Overfull \hbox (9.8978pt too wide) in paragraph at lines 276--276
  [][] 
  []
 
 File: ./img/kSimpleNetwork.png Graphic file (type bmp)
 <./img/kSimpleNetwork.png>
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 209--222
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 264--277
  |  [] 
  []
 
@@ -650,21 +664,21 @@ File: ./img/aNetwork.png Graphic file (type bmp)
 <./img/aNetwork.png>
 File: ./img/kNetwork.png Graphic file (type bmp)
  <./img/kNetwork.png>
-Overfull \hbox (4.46812pt too wide) in paragraph at lines 241--241
+Overfull \hbox (4.46812pt too wide) in paragraph at lines 296--296
  [][] 
  []
 
 
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 229--242
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 284--297
  |  [] 
  []
 
-[54]
-File: ./img/aAppearHist.png Graphic file (type bmp)
- <./img/aAppearHist.png>
-File: ./img/kAppearHist.png Graphic file (type bmp)
- <./img/kAppearHist.png>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 266--278
+[58]
+File: ./img/aAppearHist.pdf Graphic file (type pdf)
+ <./img/aAppearHist.pdf>
+File: ./img/kAppearHist.pdf Graphic file (type pdf)
+ <./img/kAppearHist.pdf>
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 321--333
  | [] 
  []
 
@@ -672,40 +686,38 @@ File: ./img/aNetworkConcentrate.png Graphic file (type bmp)
 <./img/aNetworkConcentrate.png>
 File: ./img/kNetworkConcentrate.png Graphic file (type bmp)
  <./img/kNetworkConcentrate.png>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 293--305
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 348--360
  | [] 
  []
 
-[55]
 File: ./img/aNetworkLittle.png Graphic file (type bmp)
- <./img/aNetworkLittle.png>
+<./img/aNetworkLittle.png>
 File: ./img/kNetworkLittle.png Graphic file (type bmp)
  <./img/kNetworkLittle.png>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 313--325
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 368--380
  | [] 
  []
 
-[56]
 File: ./img/aNetworkSimilar.png Graphic file (type bmp)
- <./img/aNetworkSimilar.png>
+<./img/aNetworkSimilar.png>
 File: ./img/kNetworkSimilar.png Graphic file (type bmp)
  <./img/kNetworkSimilar.png>
-Overfull \hbox (2.8996pt too wide) in paragraph at lines 348--348
+Overfull \hbox (2.8996pt too wide) in paragraph at lines 403--403
  [][] 
  []
 
 
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 337--349
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 392--404
  | [] 
  []
 
-) (./chapter06.tex [57]
+[59]) (./chapter06.tex [60] [61]
 第 6 章
-[58
+[62
 
-] [59] [60] [61] [62] [63] [64]) (./chapter07.tex [65]
+] [63] [64] [65] [66] [67] [68]) (./chapter07.tex [69]
 第 7 章
-) [66
+) [70
 
 ] (./grad_thesis.bbl
 
@@ -716,308 +728,69 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-[67
+[71
 
-] [68]
-Underfull \hbox (badness 2119) in paragraph at lines 127--133
+] [72]
+Underfull \hbox (badness 2119) in paragraph at lines 133--139
 []\OT1/cmr/m/n/10.95 FALAKMASIR, M., Yudel-son, M., Rit-ter, S., and
  []
 
-[69] [70] [71] [72]
-Underfull \hbox (badness 3250) in paragraph at lines 365--368
+[73] [74] [75] [76]
+Underfull \hbox (badness 3250) in paragraph at lines 371--374
 \OT1/cmr/m/n/10.95 A uni-fied em-bed-ding for face recog-ni-tion and clus-ter-i
 ng.  \OT1/cmr/m/it/10.95 arXiv preprint
  []
 
-[73]
-Underfull \hbox (badness 7925) in paragraph at lines 394--399
+[77]
+Underfull \hbox (badness 7925) in paragraph at lines 400--405
 []\OT1/cmr/m/n/10.95 Stamper, J., Niculescu-Mizil, A., Rit-ter, S., Gor-don,
  []
 
 
-Underfull \hbox (badness 7540) in paragraph at lines 394--399
+Underfull \hbox (badness 7540) in paragraph at lines 400--405
 \OT1/cmr/m/n/10.95 G., and Koedinger, K. (2010).  Bridge to al-ge-bra 2006-2007
 . de-vel-
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 394--399
+Underfull \hbox (badness 4531) in paragraph at lines 400--405
 \OT1/cmr/m/n/10.95 op-ment data set from kdd cup 2010 ed-u-ca-tional data min-i
 ng chal-lenge.
  []
 
-[74] [75]) (./appendix.tex [76] [77
-
-] [78] [79] [80] [81] [82] [83]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 289--298
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 298--305
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 305--309
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 309--313
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 313--328
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 328--341
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 341--355
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 355--368
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[84]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 368--381
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 381--395
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 395--409
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[85]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 409--423
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 423--436
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 436--450
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[86]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 450--464
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 464--478
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[87]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 478--492
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 492--506
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 506--519
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[88]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 519--532
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 532--546
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 546--560
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[89]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 560--573
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 573--587
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 587--601
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[90]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 601--615
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 615--628
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 628--642
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[91]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 642--654
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 654--668
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[92]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 668--683
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 683--697
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 697--711
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[93]
-Overfull \hbox (55.99113pt too wide) in alignment at lines 711--725
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 725--738
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) in alignment at lines 738--744
- [] [] [] 
- []
-
-
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-[94]
-Overfull \hbox (55.99113pt too wide) has occurred while \output is active
- [] [] [] 
- []
-
-) (./acknowledgement.tex [95])
+[78] [79]) (./acknowledgement.tex [80])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
- [96
+ [81
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
  (./grad_thesis.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
-Package rerunfilecheck Info: File `grad_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FDC79B1127CCC9C9A5B2787204A1FEF4;5692.
 
+
+Package rerunfilecheck Warning: File `grad_thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `grad_thesis.out':
+(rerunfilecheck)             Before: 902593F1CFAA23980A93F623CBBCAFCC;5621
+(rerunfilecheck)             After:  00C8470BD246D8E8705FAA134C84C372;5627.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 9525 strings out of 493683
- 153023 string characters out of 6149652
- 280723 words of memory out of 5000000
- 12909 multiletter control sequences out of 15000+600000
- 23332 words of font info for 92 fonts, out of 8000000 for 9000
+ 9531 strings out of 493683
+ 153155 string characters out of 6149652
+ 263723 words of memory out of 5000000
+ 12911 multiletter control sequences out of 15000+600000
+ 23154 words of font info for 92 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 42i,15n,49p,650b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,15n,44p,354b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on grad_thesis.dvi (104 pages, 439376 bytes).
+Output written on grad_thesis.dvi (89 pages, 392780 bytes).
