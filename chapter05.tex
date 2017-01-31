@@ -192,9 +192,9 @@ dropout率は$0.5$とした．
 \begin{tabular}{c|cccccc}\hline
 \multirow{3}{*}{データセット}	&	\multicolumn{6}{c}{AUC}\\\cline{2-7}
  							&	\multirow{2}{*}{既存タグ(marginal)} 	& \multirow{2}{*}{事前学習タグ} 	&	& \multicolumn{3}{c}{提案手法タグ}\\\cline{5-7}
-							&										& 								&	& $L_p$		 	& $L_p + L_r$	& $L_p + L_r + L_s$ \\\hline 			 
-ASSISTments 2009-2010  		&				0.72 (0.61) 			& 			0.67 				& 	& 0.69 			& {\bf 0.74} 	&					\\
-Bridge to Algebra 2006-2007 &				0.81 (0.72) 			& 			0.79 				& 	& 0.81 			& {\bf 0.82} 	&					\\
+							&										& 								&	& 	$L_p$	& $L_p + L_r$	& $L_p + L_r + L_s$ \\\hline 			 
+ASSISTments 2009-2010  		&				0.72 (0.60) 			& 			0. 					& 	& 	 		&  				&		{\bf 0.73}	\\
+Bridge to Algebra 2006-2007 &				0.78 (0.70) 			& 			0. 					& 	& 	 		& 			 	&		{\bf 0.79}	\\
 \hline
 \end{tabular}
 }
@@ -205,7 +205,7 @@ Bridge to Algebra 2006-2007 &				0.81 (0.72) 			& 			0.79 				& 	& 0.81 			& {\b
 
 
 ベースラインとなる既存の知識分類(既存タグ)と，
-回答正誤予測の文脈を考慮しない，一般的な次元削減手法として，Autoencoderの事前学習によって作成された知識分類（事前学習タグ），
+回答正誤予測の文脈を考慮しない，一般的な次元削減手法としてAutoencoderの事前学習によって作成された知識分類（事前学習タグ），
 回答正誤予測の文脈を考慮し，提案手法の知識分類学習モデルによって作成された知識分類（提案手法タグ）
 をそれぞれDeep Knowledge Tracingに適用した結果を表\ref{tab:result1}に示す．
 提案手法タグについては，知識分類学習モデルにおいて，
@@ -225,11 +225,42 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 
 \subsection{抽出タグと既存タグの関係の概観}
 抽出タグと既存タグの関係を概観する．
-まず，抽出タグと既存タグの問題を媒介とする共起行列をヒートマップとして可視化したものを図\ref{fig:Heatmap}に表す．
+
+まず，知識分類学習モデルによって学習された写像行列${\bf P}$を離散化した，問題と抽出タグの関係性を表す行列を図\ref{fig:Discrete}に表す．
+各行が問題を，各列が抽出タグを表しており，
+図において，塗りつぶされている部分の値が1，それ以外の値が0である．
+
+\begin{figure}[htb]
+\begin{center}
+\hspace*{-20pt}
+\makebox[1.1\textwidth][c]{
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=180pt]{./img/aDiscrete.pdf}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=180pt]{./img/kDiscrete.pdf}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{問題と抽出タグの関係性}
+\label{fig:Discrete}
+\end{figure}
+
+
+次に，上記の行列と既存の知識分類から，抽出タグと既存タグの問題を媒介とする共起行列を作成してヒートマップとして可視化し，
+さらに各既存タグが回答ログにおいて出現する回数をグラフ化したものを
+合わせたものを図\ref{fig:Heatmap}に表す．
 %まず，抽出タグと既存タグの問題を媒介とする共起行列をヒートマップとして可視化したものを図\ref{fig:aHeatmap}, \ref{fig:kHeatmap}, に表す．
-赤色が濃い成分ほど値が大きく，薄い成分ほど値が小さく，
-共起行列の各行が抽出タグを，各列が既存タグを表している．
-列番号に対応する既存タグの名称はそれぞれ図\ref{fig:aTable3}，\ref{fig:kTable3}のとおりである．
+ヒートマップ上で赤色が濃い成分ほど値が大きく，薄い成分ほど値が小さく，
+各行が抽出タグを，各列が既存タグを表しており，
+ヒートマップ上部のグラフの横軸はヒートマップの各列と対応している．
+各列に対応する既存タグの名称はそれぞれ図\ref{fig:aTable3}，\ref{fig:kTable3}のとおりである．
+図から，回答ログにおける出現回数が多い既存タグは，多くの抽出タグにおいて強く共起しており，
+出現回数が少ないタグは，少数の抽出タグのみと共起している．
 %列番号に対応する既存タグの名称はヒートマップ横の表に掲載した．
 
 \begin{figure}[H]
@@ -238,26 +269,22 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aHeatmap.pdf}
+		\includegraphics[height=260pt]{./img/aHeatmapGraph.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kHeatmap.pdf}
+		\includegraphics[height=260pt]{./img/kHeatmapGraph.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
 \end{center}
-\caption{抽出タグと既存タグの共起行列のヒートマップ}
+\caption{抽出タグと既存タグの共起行列のヒートマップと各既存タグの出現回数のグラフ}
 \label{fig:Heatmap}
 \end{figure}
 
 
-
-既存タグの知識間影響ネットワークである既存タグネットワークを図\ref{fig:SimpleNetwork}に，
-そこに抽出タグの情報を加えた，抽出タグと既存タグの関係性を表すタグ関係ネットワークを図\ref{fig:Network}に表す．
-%なお，タグ関係ネットワークにおいて接続している抽出タグと既存タグの組み合わせは付録にまとめた．
-
+上記の共起行列を正規化して作成したタグ関係行列のヒートマップを図\ref{fig:Normalized}に表す．
 
 \begin{figure}[H]
 \begin{center}
@@ -265,12 +292,36 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aSimpleNetwork.png}
+		\includegraphics[height=220pt]{./img/aNormalized.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kSimpleNetwork.png}
+		\includegraphics[height=220pt]{./img/kNormalized.pdf}
+		\subcaption{「Bridge to Algebra 2006-2007」}
+	\endminipage\hfill
+}
+\end{center}
+\caption{タグ関係行列のヒートマップ}
+\label{fig:Normalized}
+\end{figure}
+
+既存タグの知識間影響ネットワークである既存タグネットワークの概形を図\ref{fig:SimpleNetwork}に，
+既存タグネットワークとタグ関係行列から作成した，抽出タグと既存タグの関係性を表すタグ関係ネットワークの概形を図\ref{fig:Network}に表す．
+%なお，タグ関係ネットワークにおいて接続している抽出タグと既存タグの組み合わせは付録にまとめた．
+
+\begin{figure}[H]
+\begin{center}
+\hspace*{-20pt}
+\makebox[1.1\textwidth][c]{
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/aSimpleNetwork2.pdf}
+		\subcaption{「ASSISTments 2009-2010」}
+	\endminipage\hfill
+	\minipage{0.55\textwidth}
+		\centering
+		\includegraphics[height=220pt]{./img/kSimpleNetwork2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -285,12 +336,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aNetwork.png}
+		\includegraphics[height=220pt]{./img/aNetwork2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kNetwork.png}
+		\includegraphics[height=220pt]{./img/kNetwork2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -348,12 +399,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \hspace*{-20pt}\makebox[1.1\textwidth][c]{
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/aNetworkConcentrate.png}
+		\includegraphics[height=120pt]{./img/aNetworkConcentrate2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/kNetworkConcentrate.png}
+		\includegraphics[height=120pt]{./img/kNetworkConcentrate2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -368,12 +419,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \hspace*{-20pt}\makebox[1.1\textwidth][c]{
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/aNetworkLittle.png}
+		\includegraphics[height=120pt]{./img/aNetworkLittle2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/kNetworkLittle.png}
+		\includegraphics[height=120pt]{./img/kNetworkLittle2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -392,12 +443,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \hspace*{-20pt}\makebox[1.1\textwidth][c]{
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/aNetworkSimilar.png}
+		\includegraphics[height=120pt]{./img/aNetworkSimilar2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.53\textwidth}
 		\centering
-		\includegraphics[height=120pt]{./img/kNetworkSimilar.png}
+		\includegraphics[height=120pt]{./img/kNetworkSimilar2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
