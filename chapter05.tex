@@ -35,7 +35,7 @@
 
 知識タグ空間の次元数は，既存の知識分類の次元数と統一し，
 「ASSISTments 2009-2010」では55，
-「Bridge to Algebra 2006-2007」では115とした．
+「Bridge to Algebra 2006-2007」では192とした．
 実際のモデルにおいては，正答ベクトルと誤答ベクトルを分けてユニットを作るため，
 それぞれ2倍のユニット数で表現されている．
 
@@ -82,7 +82,7 @@ $L$(式\ref{eq:total_loss})を目的関数として最小化するものであ�
 
 得られた写像行列を以下の条件に基づいて離散化し，タグとして抽出する．
 %DKTにおいて最も高い精度を発揮したものをその手法による精度の上界として採用し，
-「ASSISTments 2009-2010」では$Y = 0.85$，「Bridge to Algebra 2006-2007」では$Y = 0.??$とした．
+「ASSISTments 2009-2010」では$Y = 0.85$，「Bridge to Algebra 2006-2007」では$Y = 0.90$とした．
 \begin{enumerate}
 \item 各問題の写像ベクトルにおいて，最も値が大きいタグを１とする．
 \item 写像行列全体において，値が閾値$Y$以上のタグを１とする．
@@ -109,9 +109,8 @@ Theanoは多次元行列を含む数学的表現の定義や計算，最適化�
 RNNの部分にはGRNNを用いる．
 ハイパーパラメータについては，
 学習率の初期値を$100$，
-モーメントを$0.98$，
-1エポックごとに，
-減衰率$0.9$として学習率を最小学習率$10$まで減衰させる．
+モーメントを「ASSISTments 2009-2010」では$0.96$，「Bridge to Algebra 2006-2007」では$0.98$とし，
+1エポックごとに，減衰率$0.95$として学習率を最小学習率$10$まで減衰させる．
 また，勾配のノルムの最大値を$0.00001$として\cite{pascanu2013difficulty}に従い勾配に制約を設けた．
 dropoutは\cite{piech2015deep}と同様に${\bf y}_t$の方向にのみかけ，
 dropout率は$0.5$とした．
@@ -147,13 +146,9 @@ dropout率は$0.5$とした．
 図\ref{fig:networkflow}の手順に従って，
 既存タグネットワークとタグ関係行列を算出し，
 こタグ関係行列を元に抽出タグのノードを既存タグネットワークに追加することで，両タグの関係性を表す「タグ関係ネットワーク」を作成する．
-
-まず，既存タグをノードとする知識間影響ネットワーク（以下，既存タグネットワーク）を，既存のDKTで用いられた手法に基づいて作成し．
-次に，抽出タグと既存タグの共起行列に対してTF-IDF法を適用して各抽出タグの特徴を強調し，抽出タグと既存タグの関係性を表す行列(以下，タグ関係行列)を作成し，
-この行列を元に抽出タグのノードを既存タグネットワークに追加することで，両タグの関係性を表す「タグ関係ネットワーク」を作成する．
 ここで，既存タグネットワークでは，
-ノードのサイズは，各既存タグの回答ログにおける出現回数に比例して設定し，
-ノードの色は，回答ログにおける平均回答順序が早いものほど青く，遅いものほど赤く色を設定し，
+ノードのサイズは各既存タグの回答ログにおける出現回数に比例して設定し，
+ノードの色は回答ログにおける平均回答順序が早いものほど青く，遅いものほど赤く色を設定し，
 各既存タグへの影響度が大きい上位3つの既存タグからエッジを引く．
 また，タグ関係ネットワークにおいて追加される抽出タグは緑色のノードで表現し，
 各抽出タグにとって関係性の強い上位3つの既存タグに対して緑色のエッジを引く．
@@ -193,8 +188,8 @@ dropout率は$0.5$とした．
 \multirow{3}{*}{データセット}	&	\multicolumn{6}{c}{AUC}\\\cline{2-7}
  							&	\multirow{2}{*}{既存タグ(marginal)} 	& \multirow{2}{*}{事前学習タグ} 	&	& \multicolumn{3}{c}{提案手法タグ}\\\cline{5-7}
 							&										& 								&	& 	$L_p$	& $L_p + L_r$	& $L_p + L_r + L_s$ \\\hline 			 
-ASSISTments 2009-2010  		&				0.72 (0.60) 			& 			0. 					& 	& 	 		&  				&		{\bf 0.73}	\\
-Bridge to Algebra 2006-2007 &				0.78 (0.70) 			& 			0. 					& 	& 	 		& 			 	&		{\bf 0.79}	\\
+ASSISTments 2009-2010  		&				0.72 (0.60) 			& 			0.69				& 	& 	 0.68	&  	  0.69		&	{\bf 0.73}		\\
+Bridge to Algebra 2006-2007 &				0.78 (0.70) 			& 			0.75				& 	& 	 0.78	& 	  0.78	 	&	{\bf 0.79}		\\
 \hline
 \end{tabular}
 }
@@ -209,11 +204,11 @@ Bridge to Algebra 2006-2007 &				0.78 (0.70) 			& 			0. 					& 	& 	 		& 			 	&		
 回答正誤予測の文脈を考慮し，提案手法の知識分類学習モデルによって作成された知識分類（提案手法タグ）
 をそれぞれDeep Knowledge Tracingに適用した結果を表\ref{tab:result1}に示す．
 提案手法タグについては，知識分類学習モデルにおいて，
-式\ref{eq:prediction_entropy}で表される問題回答予測に関する誤差関数$L_p$のみを損失関数とし，一般的なEmbeddingを行っている「$L_p$」，
+式\ref{eq:prediction_entropy}で表される問題回答予測に関する誤差関数$L_p$のみを損失関数として一般的なEmbeddingを行っている「$L_p$」，
 $L_pに加え，$式\ref{eq:autoencoder_loss}で表される問題空間と知識タグ空間の再構成誤差$L_r$も損失関数に導入した「$L_p + L_r$」，
 そして式\ref{eq:sparse}で表されるスパース正則化項$L_s$も損失関数に導入した「$L_p + L_r + L_s$」の場合について，
+%$L_pに加え，$式\ref{eq:autoencoder_loss}で表される問題空間と知識タグ空間の再構成誤差$L_r$と式\ref{eq:sparse}で表されるスパース正則化項$L_s$も損失関数に導入した「$L_p + L_r + L_s$」の場合について，
 それぞれ作成した知識分類を用いた結果を示した．
-%提案手法タグの「Embedding」と「Autoencoder」はそれぞれ誤差関数に再構成誤差とスパース正則化項を導入しない場合と導入した場合である．
 marginalは各問題についてそれぞれ正解の周辺確率を予測結果とするものである．
 \cite{piech2015deep}にも記載されていたため，本稿でも同様にベースラインの参考として記載した．
 また，値が大きい箇所は太字で記載した．
@@ -253,7 +248,7 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 
 次に，上記の行列と既存の知識分類から，抽出タグと既存タグの問題を媒介とする共起行列を作成してヒートマップとして可視化し，
 さらに各既存タグが回答ログにおいて出現する回数をグラフ化したものを
-合わせたものを図\ref{fig:Heatmap}に表す．
+合わせて図\ref{fig:Heatmap}に表す．
 %まず，抽出タグと既存タグの問題を媒介とする共起行列をヒートマップとして可視化したものを図\ref{fig:aHeatmap}, \ref{fig:kHeatmap}, に表す．
 ヒートマップ上で赤色が濃い成分ほど値が大きく，薄い成分ほど値が小さく，
 各行が抽出タグを，各列が既存タグを表しており，
@@ -284,7 +279,8 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \end{figure}
 
 
-上記の共起行列を正規化して作成したタグ関係行列のヒートマップを図\ref{fig:Normalized}に表す．
+\newpage
+さらに，上記の共起行列を正規化して作成したタグ関係行列のヒートマップを図\ref{fig:Normalized}に表す．
 
 \begin{figure}[H]
 \begin{center}
@@ -292,12 +288,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aNormalized.pdf}
+		\includegraphics[height=180pt]{./img/aNormalized.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kNormalized.pdf}
+		\includegraphics[height=180pt]{./img/kNormalized.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -306,7 +302,7 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \label{fig:Normalized}
 \end{figure}
 
-既存タグの知識間影響ネットワークである既存タグネットワークの概形を図\ref{fig:SimpleNetwork}に，
+最後に，既存タグの知識間影響ネットワークである既存タグネットワークの概形を図\ref{fig:SimpleNetwork}に，
 既存タグネットワークとタグ関係行列から作成した，抽出タグと既存タグの関係性を表すタグ関係ネットワークの概形を図\ref{fig:Network}に表す．
 %なお，タグ関係ネットワークにおいて接続している抽出タグと既存タグの組み合わせは付録にまとめた．
 
@@ -316,12 +312,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aSimpleNetwork2.pdf}
+		\includegraphics[height=200pt]{./img/aSimpleNetwork2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kSimpleNetwork2.pdf}
+		\includegraphics[height=200pt]{./img/kSimpleNetwork2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -336,12 +332,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \makebox[1.1\textwidth][c]{
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/aNetwork2.pdf}
+		\includegraphics[height=200pt]{./img/aNetwork2.pdf}
 		\subcaption{「ASSISTments 2009-2010」}
 	\endminipage\hfill
 	\minipage{0.55\textwidth}
 		\centering
-		\includegraphics[height=220pt]{./img/kNetwork2.pdf}
+		\includegraphics[height=200pt]{./img/kNetwork2.pdf}
 		\subcaption{「Bridge to Algebra 2006-2007」}
 	\endminipage\hfill
 }
@@ -356,17 +352,12 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 \subsection{抽出タグと既存タグの比較分析}
 抽出タグを既存タグと比較することにより，
 抽出タグの性質を定量的・定性的に分析する．
-
-
-
 まず，知識獲得予測の精度を向上させる要因を，データの構造から分析した．
 抽出タグと既存タグそれぞれにおいて，各タグが回答ログに出現する回数の分布の比較と，各分布の標準偏差$\sigma$を図\ref{fig:AppearHist}に表す．
-図より，既存タグはタグごとの出現回数の分散が大きい一方で，
-抽出タグは分散が小さく，特定の値の周辺に集中していることがわかる．
+図より，既存タグはタグごとの出現回数の偏りが大きい一方で，
+抽出タグは偏りが小さく，特定の値の周辺に集中していることがわかる．
 この分布の違いと予測精度の関係性については，第6章で考察する．
-
-
-\begin{figure}[htb]
+\begin{figure}[H]
 \begin{center}
 %\hspace*{-40pt}\makebox[1.2\textwidth][c]{
 \hspace*{-20pt}\makebox[1.1\textwidth][c]{
@@ -390,8 +381,8 @@ marginalは各問題についてそれぞれ正解の周辺確率を予測結果
 次に，
 図\ref{fig:Network}のネットワークの局所的な特性に着目し，抽出タグと既存タグの構造や内容の関係性が観測できる部分を示す．
 まず，既存タグに注目し，各既存タグに抽出タグがどのように紐付いているかを観察すると，
-出現回数の多い既存タグ(大きいノード)は多くの抽出タグ(緑のノード)が紐付いている(図\ref{fig:NetworkConcentrate})一方，
-出現回数の少ない既存タグ(小さいノード)は特定の抽出タグのみ紐付き，多くは紐付いていない(図\ref{fig:NetworkLittle})ことがわかる．
+出現回数の多い既存タグには多くの抽出タグ(緑のノード)が紐付いている(図\ref{fig:NetworkConcentrate})一方，
+出現回数の少ない既存タグには特定の抽出タグのみ紐付き，多くは紐付いていない(図\ref{fig:NetworkLittle})ことがわかる．
 
 \begin{figure}[htb]
 \begin{center}

@@ -22,11 +22,11 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 問題と抽出タグの関係性\relax }}{57}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces 抽出タグと既存タグの共起行列のヒートマップと各既存タグの出現回数のグラフ\relax }}{57}{figure.5.2}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces タグ関係行列のヒートマップ\relax }}{58}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 既存タグネットワークの構造\relax }}{59}{figure.5.4}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 既存タグネットワークの構造\relax }}{58}{figure.5.4}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces タグ関係ネットワークの構造\relax }}{59}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces 各タグの出現回数の分布\relax }}{60}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces 多くの抽出タグが紐づく既存タグ\relax }}{61}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces 少数の抽出タグのみ紐づく既存タグ\relax }}{61}{figure.5.8}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces 各タグの出現回数の分布\relax }}{59}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces 多くの抽出タグが紐づく既存タグ\relax }}{60}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces 少数の抽出タグのみ紐づく既存タグ\relax }}{60}{figure.5.8}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces 内容的関係性の強い既存タグに紐づく抽出タグ\relax }}{61}{figure.5.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

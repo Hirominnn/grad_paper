@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  1 FEB 2017 05:05
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.12.17)  1 FEB 2017 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,77 +634,58 @@ File: ./img/aDiscrete.pdf Graphic file (type pdf)
  <./img/aDiscrete.pdf>
 File: ./img/kDiscrete.pdf Graphic file (type pdf)
  <./img/kDiscrete.pdf>
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 235--248
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 230--243
  |  [] 
  []
 
-[56]
 File: ./img/aHeatmapGraph.pdf Graphic file (type pdf)
- <./img/aHeatmapGraph.pdf>
+<./img/aHeatmapGraph.pdf>
 File: ./img/kHeatmapGraph.pdf Graphic file (type pdf)
  <./img/kHeatmapGraph.pdf>
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 268--281
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 263--276
  |  [] 
  []
 
+[56] [57]
 File: ./img/aNormalized.pdf Graphic file (type pdf)
-<./img/aNormalized.pdf>
+ <./img/aNormalized.pdf>
 File: ./img/kNormalized.pdf Graphic file (type pdf)
  <./img/kNormalized.pdf>
-Overfull \hbox (1.89604pt too wide) in paragraph at lines 303--303
- [][] 
- []
-
-
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 291--304
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 287--300
  |  [] 
  []
 
-[57]
 File: ./img/aSimpleNetwork2.pdf Graphic file (type pdf)
- <./img/aSimpleNetwork2.pdf>
-Overfull \hbox (18.00523pt too wide) in paragraph at lines 327--327
- [][] 
+<./img/aSimpleNetwork2.pdf>
+File: ./img/kSimpleNetwork2.pdf Graphic file (type pdf)
+ <./img/kSimpleNetwork2.pdf>
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 311--324
+ |  [] 
  []
 
-File: ./img/kSimpleNetwork2.pdf Graphic file (type pdf)
-<./img/kSimpleNetwork2.pdf>
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 315--328
+File: ./img/aNetwork2.pdf Graphic file (type pdf)
+<./img/aNetwork2.pdf>
+File: ./img/kNetwork2.pdf Graphic file (type pdf)
+ <./img/kNetwork2.pdf>
+Overfull \hbox (24.23589pt too wide) in paragraph at lines 331--344
  |  [] 
  []
 
 [58]
-File: ./img/aNetwork2.pdf Graphic file (type pdf)
- <./img/aNetwork2.pdf>
-Overfull \hbox (7.95805pt too wide) in paragraph at lines 347--347
- [][] 
- []
-
-File: ./img/kNetwork2.pdf Graphic file (type pdf)
-<./img/kNetwork2.pdf>
-Overfull \hbox (15.79593pt too wide) in paragraph at lines 347--347
- [][] 
- []
-
-
-Overfull \hbox (24.23589pt too wide) in paragraph at lines 335--348
- |  [] 
- []
-
-[59]
 File: ./img/aAppearHist.pdf Graphic file (type pdf)
  <./img/aAppearHist.pdf>
 File: ./img/kAppearHist.pdf Graphic file (type pdf)
  <./img/kAppearHist.pdf>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 372--384
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 363--375
  | [] 
  []
 
+[59]
 File: ./img/aNetworkConcentrate2.pdf Graphic file (type pdf)
-<./img/aNetworkConcentrate2.pdf>
+ <./img/aNetworkConcentrate2.pdf>
 File: ./img/kNetworkConcentrate2.pdf Graphic file (type pdf)
  <./img/kNetworkConcentrate2.pdf>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 399--411
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 390--402
  | [] 
  []
 
@@ -712,7 +693,7 @@ File: ./img/aNetworkLittle2.pdf Graphic file (type pdf)
 <./img/aNetworkLittle2.pdf>
 File: ./img/kNetworkLittle2.pdf Graphic file (type pdf)
  <./img/kNetworkLittle2.pdf>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 419--431
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 410--422
  | [] 
  []
 
@@ -720,7 +701,7 @@ File: ./img/aNetworkSimilar2.pdf Graphic file (type pdf)
 <./img/aNetworkSimilar2.pdf>
 File: ./img/kNetworkSimilar2.pdf Graphic file (type pdf)
  <./img/kNetworkSimilar2.pdf>
-Overfull \hbox (21.80255pt too wide) in paragraph at lines 443--455
+Overfull \hbox (21.80255pt too wide) in paragraph at lines 434--446
  | [] 
  []
 
@@ -797,4 +778,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  42i,15n,44p,354b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on grad_thesis.dvi (90 pages, 394004 bytes).
+Output written on grad_thesis.dvi (90 pages, 394100 bytes).

@@ -64,7 +64,7 @@
 \contentsline {section}{\numberline {5.2}実験結果}{55}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}知識分類の予測性能の比較}{55}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}抽出タグと既存タグの関係の概観}{56}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}抽出タグと既存タグの比較分析}{60}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}抽出タグと既存タグの比較分析}{59}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {第6章}考察}{62}{chapter.6}
 \contentsline {section}{\numberline {6.1}本手法の有効性と知識分類の解釈}{62}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}知識分類学習モデルの有効性}{62}{subsection.6.1.1}
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {6.2.2}本手法の教育現場への適用と実用的・学術的価値}{66}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}今後の展望}{67}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}知識分類学習モデルの改善}{67}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}学習科学における対象データの拡大}{68}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}学習科学における対象データの拡大}{67}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}学習科学以外の分野への応用}{68}{subsection.6.3.3}
 \contentsline {chapter}{\numberline {第7章}結論}{70}{chapter.7}
 \contentsline {chapter}{参考文献}{71}{chapter.7}
