@@ -17,7 +17,7 @@
 
 %まず，教育の個人最適化に関する現状や研究について整理した後，
 まず，人間の学習効果について研究する学習科学の歴史と情報技術の発達との関係性について整理した後，
-教育と情報技術の象徴でもあるオンライン教育サービスについて，具体的な事例を挙げながら，その効果や関連する研究について述べる．
+教育と情報技術の象徴的な例であるオンライン教育サービスについて，具体的な事例を挙げながら，その効果や関連する研究について述べる．
 次に，深層学習について概説し，本論文との関わりが深いRecurrent Neural Netoworksについて詳細に述べる．
 さらに，知識獲得の予測手法であるKnowledge Tracingについて，その有益性や，伝統的な手法，深層学習を用いた最先端の手法について整理した後，
 本研究において既存手法を拡張する上で用いる，大規模データから次元削減を行う関連手法について整理する．
@@ -130,7 +130,7 @@ MOOCsが教育に与える影響は大きく，その影響や可能性を分析
 	%\begin{center}
 	\minipage{0.55\textwidth}
 		\centering\includegraphics[width=200pt]{./img/coursera.pdf}
-		\caption{Courseraのイメージ}
+		\caption{Coursera}
 		\label{fig:cousera}
 	\endminipage
 	\hfill
@@ -138,7 +138,7 @@ MOOCsが教育に与える影響は大きく，その影響や可能性を分析
 	%\begin{center}
 	\minipage{0.55\textwidth}
 		\centering\includegraphics[width=200pt]{./img/jmooc.pdf}
-		\caption{JMOOCのイメージ}
+		\caption{JMOOC}
 		\label{fig:jmooc}
 	\endminipage
 	%\end{center}	
@@ -146,8 +146,7 @@ MOOCsが教育に与える影響は大きく，その影響や可能性を分析
 \end{center}
 \end{figure}
 
-MOOCsの有名な事例として，世界的に有名なCourseraや，日本発のMOOCsであるJMOOCが挙げられる．
-CourseraとJMOOCのイメージを図\ref{fig:cousera}，\ref{fig:jmooc}に示す．
+MOOCsの有名な事例として，世界的に有名なCoursera(図\ref{fig:cousera})や，日本発のMOOCsであるJMOOC(図\ref{fig:jmooc})が挙げられる．
 Courseraは，2017年1月の時点で，
 29の国にまたがる148の教育機関とパートナーシップを結び，
 コンピュータサイエンス，数学や論理，社会科学などに関する1600以上の講座を，2200万人以上に提供している\footnote{講座数と利用者数はトップページの記載より引用．}．
@@ -168,7 +167,7 @@ Intelligent Tutoring System(ITS)と呼ばれるオンライン自動学習支援
 \label{fig:knewton}
 \end{figure}
 
-ITSの有名な事例として，世界最大級のITSであるKnewton\footnote{\url{https://www.knewton.com/}}のイメージを図\ref{fig:knewton}に示す．
+ITSの有名な事例として，世界最大級のITSであるKnewton\footnote{\url{https://www.knewton.com/}}(図\ref{fig:knewton})が挙げられる．
 Knewtonでは，生徒の学力や理解度と，学ぶべき対象をマッピングすることで、
 生徒個人に最適な学習過程を設計し，
 かつ生徒の学習の進捗に応じてその過程を動的に変化させる仕組みを有している\cite{upbin2012knewton}．
@@ -257,8 +256,8 @@ MOOCsやITSなどのオンライン教育サービスには，
 \label{fig:neuron}
 \end{figure}
 
-各ニューロンは他のニューロンから入力信号$x$を受け取るが，その信号の伝達効率は一様ではない．
-それぞれの入力には伝達効率として重み$w$が設定され，その重み付きの入力$w x$が対象のニューロンに加算されていく．
+各ニューロンは他のニューロンから入力信号$x_i$を受け取るが，その信号の伝達効率は一様ではない．
+それぞれの入力には伝達効率として重み$w_i$が設定され，その重み付きの入力$w_i x_i$が対象のニューロンに加算されていく．
 %その総和$u$がある閾値$\theta$を超えた時，該当のニューロンは発火したものと見なし，他のニューロンに出力信号$y$が送られる．
 その総和$u$は事前に定められた活性化関数$f$に基づいて正規化され，出力される．
 活性化関数には様々な種類があり，
@@ -331,14 +330,13 @@ ${\bf y}_j$は層$j$における出力を指す．
 パラメータを勾配方向に修正することを繰り返すことにより，最適なパラメータを探索していく．
 重みの更新の基本的な仕組みは，以下の式によって表される．
 \begin{eqnarray}
-\nabla E &=& \frac{\partial E}{\partial {\bf w}}
- = \biggl[\frac{\partial E}{\partial w_1}, \frac{\partial E}{\partial w_2}, \cdots, \frac{\partial E}{\partial w_n}\biggr] \\
+\nabla E &=& \frac{\partial E}{\partial {\bf W}_{i,j}}
 \\
-{\bf w}^{(t+1)} &=& {\bf w}^{(t)} - \epsilon \nabla E
+{\bf W}^{(t+1)}_{i,j} &=& {\bf W}^{(t)}_{i,j} - \epsilon \nabla E
 \end{eqnarray}
 なお，
 $E$は誤差関数であり，
-${\bf w}^{(t)}$は時刻$t$における重みベクトルであり，
+${\bf W}^{(t)}_{i,j}$は時刻$t$における重み行列であり，
 $\epsilon$は学習率と呼ばれる，1回の学習あたりのパラメータ更新量の大きさを決定する定数である．
 
 このようにニューラルネットワークの基礎として考案された単純パーセプトロンだが，
@@ -400,7 +398,7 @@ AlphaGoは，過去の対局の情報である棋譜の分析によって人間�
 汎用性の低い特徴まで過剰に学習してしまう過学習に陥りやすくなる\cite{tetko1995neural}．
 
 実際に大規模データを利用した研究の例では，
-人間より高い精度で人の顔を見分けらると報告する顔認識の研究\cite{schroff2015facenet}では数百万人の2億枚以上の顔画像を，
+人間より高い精度で人の顔を見分けられると報告する顔認識の研究\cite{schroff2015facenet}では数百万人の2億枚以上の顔画像を，
 英語からフランス語に翻訳する機械翻訳の研究\cite{xu2015show}では1200万もの文章を，
 それぞれ訓練データとして利用している．
 
@@ -628,7 +626,7 @@ Knowledge Tracingは過去の生徒の問題回答履歴から生徒が次に解
 時刻$t$までの問題回答結果から時刻$t+1$において観測される問題回答結果を予測するものとすると，
 生徒の時刻$t$において観測された問題回答結果を$q_{t}$とすれば，
 $q_1, q_2, \dots, q_t$から$q_{t+1}$の正誤確率を求めるという，事後確率$p(q_{t+1} = correct|q_1, q_2, \dots, q_t)$を求めるタスクとして設定できる．
-予測性能の評価は\cite{yudelson2013individualized, falakmasir2015spectral}ではAccuracy\footnote{正解率．予測結果全体と、答えがどれぐらい一致しているかを判断する指標．0〜1で表され，完全な予測時に１となる．}で，
+予測性能の評価は\cite{yudelson2013individualized, falakmasir2015spectral}ではAccuracy\footnote{正解率．予測結果全体と，答えがどれぐらい一致しているかを判断する指標．0〜1で表され，完全な予測時に１となる．}で，
 \cite{piech2015deep}ではAUC\footnote{正例を正しく分類した割合を縦軸に，負例を正しく分類した割合を横軸に取るROC曲線における，曲線より下の面積．0〜1で表され，完全な予測時に１となり，ランダムな予測で0.5付近を示す．}で行っており，
 目的に応じてさまざまである．
 本研究では，AUCによって予測性能を評価する．
@@ -693,6 +691,7 @@ p(C_{t})^{k}_{u} &=& p(L_{t-1})^{k}_{u} \cdot (1 - p(S)^k) + (1 - p(L_{t-1})^k_{
 特に，大規模データへの適用という観点ではHMMに基づいた生成モデルの手法では，計算コストが膨大になるため，
 \cite{yudelson2013individualized}では目的関数に負の対数尤度（Negative Log Likelihood）を利用し，勾配降下法（Gradient Descent）で識別モデルとして学習させている．
 
+このように，BKTには様々な手法が存在するが，いずれの手法も各知識を独立のものとして捉えて条件付き確率を計算している．そのため，知識獲得の時系列性は考慮されるものの，複数の知識間の影響関係を考慮できないという問題が存在する．
 
 \subsection{Performance Factor Analysis}
 Performance Factor Analysis\cite{pavlik2009performance}（以下，PFA）も
@@ -715,10 +714,11 @@ $s_{i, k}$と$f_{i, k}$はそれぞれユーザ$i$が知識$k$に事前に正答
 であり，
 過去の各知識ごとの回答正誤を重み付けしてシグモイド関数$\sigma$にかけ，別の問題の正誤を予測するというものである．
 
-
+このように，PFAでは複数の知識間の影響性を考慮することが可能であるが，過去の回答を全て同列に扱っているため，知識獲得の時系列性を考慮できないという問題が存在する．
 
 
 \subsection{Deep Knowledge Tracing}
+\label{sec:dkt}
 Deep Knowledge Tracing\cite{piech2015deep}（以下，DKT）はRNNを利用してKnowledge Tracingを行う手法である．
 2015年6月に発表され，数学の問題回答ログのデータセットで実験され，
 高い性能で将来の知識獲得を予測できること，

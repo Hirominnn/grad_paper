@@ -8,44 +8,44 @@ Warning--empty journal in mcauley2010mooc
 Warning--empty booktitle in zaremba2015empirical
 You've used 95 entries,
             1935 wiz_defined-function locations,
-            969 strings with 21446 characters,
-and the built_in function-call counts, 39207 in all, are:
-= -- 3806
-> -- 1854
-< -- 58
-+ -- 663
-- -- 636
-* -- 3259
-:= -- 6847
+            968 strings with 21228 characters,
+and the built_in function-call counts, 38864 in all, are:
+= -- 3770
+> -- 1832
+< -- 59
++ -- 655
+- -- 628
+* -- 3227
+:= -- 6806
 add.period$ -- 290
 call.type$ -- 95
-change.case$ -- 786
+change.case$ -- 782
 chr.to.int$ -- 94
 cite$ -- 98
-duplicate$ -- 1496
-empty$ -- 2551
-format.name$ -- 769
-if$ -- 7640
+duplicate$ -- 1482
+empty$ -- 2529
+format.name$ -- 761
+if$ -- 7560
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 90
 newline$ -- 473
 num.names$ -- 285
-pop$ -- 754
+pop$ -- 744
 preamble$ -- 1
-purify$ -- 789
+purify$ -- 785
 quote$ -- 0
-skip$ -- 1163
+skip$ -- 1154
 stack$ -- 0
-substring$ -- 2393
-swap$ -- 242
-text.length$ -- 18
+substring$ -- 2361
+swap$ -- 233
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 562
 warning$ -- 3
-while$ -- 296
+while$ -- 293
 width$ -- 0
-write$ -- 1194
+write$ -- 1193
 is.kanji.str$ -- 0
 (There were 3 warnings)
